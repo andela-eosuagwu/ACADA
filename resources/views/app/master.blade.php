@@ -37,6 +37,9 @@
          -->
         @include('app.includes.sections.footer')
         
+        <script src="{{ asset('res/js/classie.js')  }}"></script>
+        <script src="{{ asset('res/js/uisearch.js')  }}"></script>
+        <script> new UISearch( document.getElementById( 'sb-search' ) ); </script>
         <script type="text/javascript" src="{{ asset('res/js/responsive-nav.js') }}"></script>
     </body>
 </html>

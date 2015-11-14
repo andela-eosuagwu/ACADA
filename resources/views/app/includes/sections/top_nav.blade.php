@@ -1,3 +1,19 @@
+<!-- 
+ The file for the Arr class
+
+ @author     Emeka Osuagwu <emekaosuagwuandela0@gmail.com>
+ @copyright  2015 Emeka Osuagwu
+ @license    MIT License <http://opensource.org/licenses/MIT>   
+
+ @CodeFuntion: Header section houses.
+
+ Logo
+ Sign up
+ Sign in
+ Search bar
+ Top navigation
+ -->
+
 <div class="header">
     <div class="col-sm-8 header-left">
         <div class="logo">
@@ -29,12 +45,9 @@
             </div>
         </div>
 
-        <script src="{{ asset('res/js/classie.js')  }}"></script>
-        <script src="{{ asset('res/js/uisearch.js')  }}"></script>
-        <script> new UISearch( document.getElementById( 'sb-search' ) ); </script>
-                         
         <div class="clearfix"></div>
     </div>
+    
     <div class="col-sm-4 header_right">
         <div id="loginContainer"><a href="#" id="loginButton"><img src="{{ asset('res/images/login.png') }}"><span>Login</span></a>
             <div id="loginBox">                
