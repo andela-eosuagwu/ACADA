@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Validator;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -57,9 +58,31 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'email'     => $data['email'],
+            'username'  => $data['username'],
+            'password'  => bcrypt($data['password']),
         ]);
     }
+
+    /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param  array  $data
+     * @return User
+     */
+    protected function postSignup(Request $request)
+    {
+        $email      = $request['email'];
+        $username   = $request['username'];
+        $password   = $request['password'];
+        
+        $this->create($request->all());
+    }
+
+
+    public function FunctionName($value='')
+    {
+        # code...
+    }
+
 }

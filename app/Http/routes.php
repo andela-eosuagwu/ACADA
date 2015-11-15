@@ -35,3 +35,9 @@ Route::get('/video/{category}/{id}', function ($category, $id) {
 	return view('app.pages.play_video');
 });
 
+
+
+Route::post('signup', [
+    'uses' => 'Auth\AuthController@postSignup',
+    'as'   => 'passwordreset'
+]);
