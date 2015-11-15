@@ -8,7 +8,7 @@
  
  <!--
  @Contact Section: takes care of ACDA contact infomations
- 
+
  @GoogleMap: shows location of ACADA
  @Written Address
     
@@ -41,6 +41,13 @@
     </div>
 </div>
 
+
+ <!--
+ @Contact Section: takes care of ACDA contact infomations
+ 
+ @GoogleMap: shows location of ACADA
+ @Written Address
+ -->
 <div class="living_middle wow fadeInUp" data-wow-delay="0.4s">
     <div class="container">
         <h2>Feedback</h2>
