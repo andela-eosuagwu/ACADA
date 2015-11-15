@@ -23,8 +23,6 @@ Route::get('/contact', function () {
     return view('app.pages.contact');
 });
 
-
-
 Route::get('video', function () {
     return "all videos";
 });
