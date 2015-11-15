@@ -14,3 +14,30 @@
 Route::get('/', function () {
     return view('app.pages.index');
 });
+
+Route::get('/', function () {
+    return view('app.pages.index');
+});
+
+Route::get('/contact', function () {
+    return view('app.pages.contact');
+});
+
+Route::get('video', function () {
+    return "all videos";
+});
+
+Route::get('/video/{category}', function ($category) {
+    return view('app.pages.category');
+});
+
+Route::get('/video/{category}/{id}', function ($category, $id) {
+	return view('app.pages.play_video');
+});
+
+
+
+Route::post('signup', [
+    'uses' => 'Auth\AuthController@postSignup',
+    'as'   => 'passwordreset'
+]);
