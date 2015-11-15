@@ -15,7 +15,6 @@
                     <p>20 Photos</p>
                 </div>
             </div>           
-            
             <div class="clearfix"> </div>
         </div> 
 
