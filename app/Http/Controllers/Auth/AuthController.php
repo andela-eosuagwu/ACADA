@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\User;
 use Validator;
 use Illuminate\Http\Request;
+use App\Http\Checker\Checker;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -75,14 +76,25 @@ class AuthController extends Controller
         $email      = $request['email'];
         $username   = $request['username'];
         $password   = $request['password'];
-        
-        $this->create($request->all());
-    }
 
+        if ( Checker::checkByUserName($username) === "present") 
+        {
+            $response = [
+                "message"       => "Registration Failed",
+                "status_code"   => 401
+            ];
+        }
+        else
+        {
+            $response = [
+                "message"       => "Registration Successful",
+                "status_code"   => 200
+            ];
+            $this->create($request->all());
+        };
 
-    public function FunctionName($value='')
-    {
-        # code...
+        return $response;
+
     }
 
 }
