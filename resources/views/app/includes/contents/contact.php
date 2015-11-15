@@ -1,3 +1,18 @@
+<!-- 
+
+ @author     Emeka Osuagwu <emekaosuagwuandela0@gmail.com>
+ @copyright  2015 Emeka Osuagwu
+ @license    MIT License <http://opensource.org/licenses/MIT>   
+
+ -->
+ 
+ <!--
+ @Contact Section: takes care of ACDA contact infomations
+ 
+ @GoogleMap: shows location of ACADA
+ @Written Address
+    
+ -->
 <div class="contact">
     <div class="container">
         <h1>Contact Us</h1>
@@ -25,7 +40,6 @@
         </div>
     </div>
 </div>
-
 
 <div class="living_middle wow fadeInUp" data-wow-delay="0.4s">
     <div class="container">
