@@ -25,11 +25,9 @@
         <div class="menu">
             <a class="toggleMenu" href="#"><img src="images/nav.png" alt="" /></a>
             <ul class="nav" id="nav">
-                <li class="active"><a href="index.html">Reality</a></li>
-                <li><a href="living.html">Living</a></li>
-                <li><a href="education.html">Education</a></li>
-                <li><a href="entertain.html">Entertainment</a></li>
-                <li><a href="404.html">Mobility</a></li>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="living.html">About</a></li>
+                <li><a href="living.html">Contact</a></li>
                 <div class="clearfix"></div>
             </ul>
         </div>
@@ -47,7 +45,7 @@
 
         <div class="clearfix"></div>
     </div>
-    
+
     <div class="col-sm-4 header_right">
         <div id="loginContainer"><a href="#" id="loginButton"><img src="{{ asset('res/images/login.png') }}"><span>Login</span></a>
             <div id="loginBox">                
