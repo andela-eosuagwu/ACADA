@@ -37,7 +37,17 @@ Route::get('/video/{category}/{id}', function ($category, $id) {
 
 
 
-Route::post('signup', [
+Route::get('signup', [
     'uses' => 'Auth\AuthController@postSignup',
-    'as'   => 'passwordreset'
+    'as'   => 'signup'
+]);
+
+Route::get('signin', [
+    'uses' => 'Auth\AuthController@postSignin',
+    'as'   => 'signin'
+]);
+
+Route::get('logout', [
+    'uses' => 'Auth\AuthController@getLogout',
+    'as'   => 'logout'
 ]);
