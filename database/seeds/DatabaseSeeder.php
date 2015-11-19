@@ -18,13 +18,13 @@ class DatabaseSeeder extends Seeder
 
         $faker = Factory::create();
 
-        foreach (range(1,100) as $index) 
+        foreach (range(1,10) as $index) 
         {
 
             Video::create([
                 'src'        => "https://www.youtube.com/embed/pfp0x0NQf-E",
                 'title'      => $faker->email,
-                'category'   => $faker->name
+                'category'   => "php"
             ]);
 
         }

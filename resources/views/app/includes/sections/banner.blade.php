@@ -4,12 +4,16 @@
         <div class="dropdown-buttons">   
 
         </div>  
-        <form>
-            <input type="text" value="Keyword, name, date, ..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword, name, date, ...';}">
+        <form action="search" method="get">
+            <input type="text" name="category">
             <div class="contact_btn">
-            <label class="btn1 btn-2 btn-2g"><input name="submit" type="submit" id="submit" value="Search"></label>
+                <label class="btn1 btn-2 btn-2g">
+                    <input type="submit" id="submit">
+                </label>
             </div>
         </form>             
         <div class="clearfix"></div>
     </div>
 </div>
+<!-- 
+value="Keyword, name, date, ..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword, name, date, ...';}" -->

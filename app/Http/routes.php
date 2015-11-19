@@ -23,17 +23,38 @@ Route::get('/contact', function () {
     return view('app.pages.contact');
 });
 
-Route::get('video', function () {
-    return "all videos";
-});
 
-Route::get('/video/{category}', function ($category) {
-    return view('app.pages.category');
-});
+Route::get('search', [
+    'uses' => 'SearchController@index',
+    'as'   => 'search'
+]);
 
-Route::get('/video/{category}/{id}', function ($category, $id) {
-	return view('app.pages.play_video');
-});
+
+
+
+
+Route::get('video', [
+    'uses' => 'VideoController@index',
+    'as'   => 'video'
+]);
+
+Route::get('video/{category}', [
+    'uses' => 'VideoController@category',
+    'as'   => 'video'
+]);
+
+Route::get('video/{category}/{id}', [
+    'uses' => 'VideoController@show',
+    'as'   => 'video'
+]);
+
+
+
+
+
+
+
+
 
 
 
