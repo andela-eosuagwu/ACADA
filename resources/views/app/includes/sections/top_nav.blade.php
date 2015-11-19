@@ -36,9 +36,36 @@
 
         <div class="clearfix"></div>
     </div>
+    
+    <div class="col-sm-4 header_right">
+        <div id="loginContainer">
+            <a href="#" id="loginButton"><img src="{{ asset('res/images/login.png') }}"><span>Login</span></a>
+            <a href="logout" id="loginButton"><img src="{{ asset('res/images/login.png') }}"><span>Logout</span></a>
+            <a href="#" id="loginButton"><img src="{{ asset('res/images/login.png') }}"><span>Register</span></a>
+            
 
-<!--     <div class="col-sm-4 header_right">
-        <div id="loginContainer"><a href="#" id="loginButton"><img src="{{ asset('res/images/login.png') }}"><span>Login</span></a>
+            <div id="loginBox">                
+                <form action="signin" method="get" id="loginForm">
+                    <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+                    <fieldset id="body">
+                        <fieldset>
+                            <label for="email">Username</label>
+                            <input type="text" name="username" id="email">
+                        </fieldset>
+                        
+                        <fieldset>
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password">
+                        </fieldset>
+
+                        <input type="submit" id="login" value="Sign in">
+                        <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+                    </fieldset>
+                    <span><a href="#">Forgot your password?</a></span>
+                </form>
+            </div>
+        
+            <!--             
             <div id="loginBox">                
                 <form action="signup" method="get" id="loginForm">
                     <fieldset id="body">
@@ -64,33 +91,8 @@
                     <span><a href="#">Forgot your password?</a></span>
                 </form>
             </div>
-        </div>
-        <div class="clearfix"></div>
-    </div> -->
+             -->
 
-    
-    <div class="col-sm-4 header_right">
-        <div id="loginContainer"><a href="#" id="loginButton"><img src="{{ asset('res/images/login.png') }}"><span>Login</span></a>
-            <div id="loginBox">                
-                <form action="signin" method="get" id="loginForm">
-                    <input type="hidden" name="_token" value="{!! csrf_token() !!}">
-                    <fieldset id="body">
-                        <fieldset>
-                            <label for="email">Username</label>
-                            <input type="text" name="username" id="email">
-                        </fieldset>
-                        
-                        <fieldset>
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password">
-                        </fieldset>
-
-                        <input type="submit" id="login" value="Sign in">
-                        <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
-                    </fieldset>
-                    <span><a href="#">Forgot your password?</a></span>
-                </form>
-            </div>
         </div>
         <div class="clearfix"></div>
     </div>
