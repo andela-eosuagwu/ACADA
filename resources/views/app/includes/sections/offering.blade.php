@@ -1,4 +1,4 @@
-<div class="offering">
+    <div class="offering">
     <h2>What can ACADA offer to you ?</h2>
     <h3>Ut wisi enim ad minim veniam, quis</h3>
     <ul class="icons wow fadeInUp" data-wow-delay="0.4s">

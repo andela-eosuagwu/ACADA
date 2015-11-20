@@ -20,10 +20,6 @@ class SearchController extends Controller
         return view('app.pages.category', compact('categorys'));
     }
 
-
-
-
-
     /**
      * Show the form for creating a new resource.
      *

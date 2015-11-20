@@ -1,27 +1,54 @@
-## Laravel PHP Framework
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+## Learner Tube is a PHP project that provides a platform for sharing video tutorials
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
-
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
-
-## Official Documentation
-
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+[![Build Status](https://travis-ci.org/andela-vdugeri/learner-tube.png?branch=master)](http://travis-ci.org/andela-vdugeri/learner-tube)
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+Thank you for considering contributing to the Learner Tube project! The contribution guide can be found in the [Contributing file](CONTRIBUTING.md).
+
+##Usage
+
+To download and use this project you need to have the following installed on your machine
+- Composer
+  for instructions on how to install composer visit the [official website](https://getcomposer.org/doc/00-intro.md) for installation instructions
+- Laravel homestead
+  visit the [Laravel website](http://laravel.com/docs/5.1/homestead) for installation and set up instructions.
+
+When you have succesfully completed the above processes, you can run:
+```bash
+git clone https://github.com/andela-vdugeri/learner-tube.git
+`````
+to clone the repository to your working directory. This step presumes that you have git set up and running.
+
+Run
+````bash
+composer install
+`````
+to pull in the project dependencies.
+
+Now you are set up and ready to run.
+
+
+##Project features
+- Authentication:
+  Registration
+  Sign in
+  social mediation authentication
+- User Profile Management
+- Youtube Video embedding - Authenticated users only
+- Addition of new categories - Authenticated users only
+- Browse all videos
+- Browse videos by category
+- view single video
+
+You can visit [learner-tube demo page](https://learner-tube.herokuapp.com/) to view the project demo.
+
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within Learner Tube, please send an e-mail to Verem Dugeri at danverem@gmail.com. All security vulnerabilities will be promptly addressed.
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+The Learner Tube is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
