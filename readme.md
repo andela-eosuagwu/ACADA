@@ -1,7 +1,7 @@
-
-## Learner Tube is a PHP project that provides a platform for sharing video tutorials
-
 [![Build Status](https://travis-ci.org/andela-vdugeri/learner-tube.png?branch=master)](http://travis-ci.org/andela-vdugeri/learner-tube)
+
+# ACADA 
+
 
 ## Contributing
 
