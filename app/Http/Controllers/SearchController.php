@@ -18,7 +18,6 @@ class SearchController extends Controller
     {
         $categorys = Video::get()->where('category', $request['category']);
         return view('app.pages.category', compact('categorys'));
-
     }
 
 

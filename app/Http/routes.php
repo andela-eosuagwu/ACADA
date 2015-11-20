@@ -11,13 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('app.pages.index');
-});
 
-Route::get('/', function () {
-    return view('app.pages.index');
-});
+Route::get('/', [
+    'uses' => 'VideoController@index',
+    'as'   => '/'
+]);
+
+
+// Route::get('/', function () {
+//     return view('app.pages.index');
+// });
 
 Route::get('/contact', function () {
     return view('app.pages.contact');
