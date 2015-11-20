@@ -7,10 +7,20 @@
 @section('content')
 
 
-    <br><br><br><br>
     <div class="container">
         <div class="top_grid">
+            <br><br><br><br>
+
+            @if( sizeof($categorys) == 0)
+                <center>
+                    <h1>Category Not found</h1>
+                    <a href="/"><p>CLick here to start here over</p></a>
+                </center>
+                <br>
+            @endif
+
             @foreach( $categorys as $video )
+            
             <div class="col-md-3 margin-1" >
                 <div class="grid1">
                     <div class="view view-first">
@@ -22,7 +32,7 @@
                     </div> 
 
                     <div class="inner_wrap">
-                        <a href="video/{{$video->category}}/{{$video->id}}"> 
+                        <a href="/video/{{$video->category}}/{{$video->id}}"> 
                             <h3>{{$video->title}}</h3>    
                         </a>
                     </div>

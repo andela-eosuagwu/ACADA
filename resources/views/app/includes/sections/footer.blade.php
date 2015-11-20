@@ -22,10 +22,10 @@
             <div class="footer-grid">
                 <h4>Categorys</h4>
                 <ul class="list1">
-                    <li><a href="video/php">php</a></li>
-                    <li><a href="video/ruby">ruby</a></li>
-                    <li><a href="video/java">java</a></li>
-                    <li><a href="video/java">node</a></li>
+                    <li><a href="/video/php">php</a></li>
+                    <li><a href="/video/ruby">ruby</a></li>
+                    <li><a href="/video/java">java</a></li>
+                    <li><a href="/video/nodejs">node</a></li>
                 </ul>
             </div>
             <div class="footer-grid last_grid">
