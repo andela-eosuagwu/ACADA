@@ -42,7 +42,7 @@ Now you are set up and ready to run.
 - Browse videos by category
 - view single video
 
-You can visit [learner-tube demo page](https://learner-tube.herokuapp.com/) to view the project demo.
+You can visit [acada demo page](acada.herokuapp.com/) to view the project demo.
 
 
 ## Security Vulnerabilities
