@@ -15,21 +15,17 @@
             <div class="footer-grid">
                 <h4>Ipsum Quis</h4>
                 <ul class="list1">
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="#">Mirum est</a></li>
-                    <li><a href="#">placerat facer</a></li>
-                    <li><a href="#">claritatem</a></li>
-                    <li><a href="#">sollemnes </a></li>
+                    <li><a href="contact">Contact</a></li>
+                    <li><a href="about">About</a></li>
                 </ul>
             </div>
             <div class="footer-grid">
-                <h4>Quis Ipsum</h4>
+                <h4>Categorys</h4>
                 <ul class="list1">
-                    <li><a href="#">placerat facer</a></li>
-                    <li><a href="#">claritatem</a></li>
-                    <li><a href="#">sollemnes </a></li>
-                    <li><a href="#">Claritas</a></li>
-                    <li><a href="#">Mirum est</a></li>
+                    <li><a href="video/php">php</a></li>
+                    <li><a href="video/ruby">ruby</a></li>
+                    <li><a href="video/java">java</a></li>
+                    <li><a href="video/java">node</a></li>
                 </ul>
             </div>
             <div class="footer-grid last_grid">
@@ -41,7 +37,7 @@
                 <li><a href=""><i class="u_tube"> </i> </a></li>
                 </ul>
                 <div class="copy wow fadeInRight" data-wow-delay="0.4s">
-                <p>&copy; Template by <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+                <p>&copy; ACADA 2015 </p>
                 </div>
             </div>
             <div class="clearfix"> </div>

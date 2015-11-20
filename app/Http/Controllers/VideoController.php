@@ -27,8 +27,18 @@ class VideoController extends Controller
      */
     public function create()
     {
-        //
+        return view('app.pages.create');
     }
+
+    protected function save(array $data)
+    {
+        Video::create([
+            'category'  => $data['category'],
+            'title'     => $data['title'],
+            'src'       => $data['src']
+        ]);
+    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -38,7 +48,11 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $link       =  $request['src'];
+        $title      =  $request['title'];
+        $category   =  $request['category'];
+
+        $this->save($request->all());
     }
 
     /**
@@ -62,8 +76,8 @@ class VideoController extends Controller
     public function show($category, $id)
     {
         //$video = Video::all()->where('category', 'php')->find($id);
-        $video      = Video::all()->where('category', 'php')->find($id);
-        $feature    = Video::all()->where('category', 'php')->take(4);
+        $video      = Video::all()->where('category', $category)->find($id);
+        $feature    = Video::all()->where('category', $category)->take(4);
         
         $data = 
         [

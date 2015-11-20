@@ -17,20 +17,28 @@ Route::get('/', [
     'as'   => '/'
 ]);
 
-
-// Route::get('/', function () {
-//     return view('app.pages.index');
-// });
-
 Route::get('/contact', function () {
     return view('app.pages.contact');
 });
-
 
 Route::get('search', [
     'uses' => 'SearchController@index',
     'as'   => 'search'
 ]);
+
+
+Route::get('create', [
+    'uses' => 'VideoController@create',
+    'as'   => 'create'
+]);
+
+Route::get('createpost', [
+    'uses' => 'VideoController@store',
+    'as'   => 'createpost'
+]);
+
+
+
 
 
 
@@ -50,14 +58,6 @@ Route::get('video/{category}/{id}', [
     'uses' => 'VideoController@show',
     'as'   => 'video'
 ]);
-
-
-
-
-
-
-
-
 
 
 

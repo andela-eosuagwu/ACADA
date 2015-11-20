@@ -1,3 +1,11 @@
+<!-- 
+ The file for the Arr class
+
+ @author     Emeka Osuagwu <emekaosuagwuandela0@gmail.com>
+ @copyright  2015 Emeka Osuagwu
+ @license    MIT License <http://opensource.org/licenses/MIT>   
+ -->
+
 <div class="banner">
     <div class="container_wrap">
         <h1>What are you looking for?</h1>
@@ -15,5 +23,3 @@
         <div class="clearfix"></div>
     </div>
 </div>
-<!-- 
-value="Keyword, name, date, ..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Keyword, name, date, ...';}" -->
