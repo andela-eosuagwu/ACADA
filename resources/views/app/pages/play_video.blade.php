@@ -1,6 +1,6 @@
 @extends('app.master')
 
-@section('title', 'This is SuyaBay #TISb')
+@section('title', 'ACADA')
 
 @endsection
 
@@ -16,7 +16,7 @@
 	| include main content to home page
 	| @location includes/contents/main.blade.php
 	 -->
-    @include('app.includes.contents.main')
+    @include('app.includes.sections.feature')
 
 	<!-- 
 	| include offering section to home page

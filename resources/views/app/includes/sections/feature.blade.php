@@ -1,17 +1,15 @@
-@extends('app.master')
+<!-- 
+ The file for the Arr class
 
-@section('title', 'ACADA')
+ @author     Emeka Osuagwu <emekaosuagwuandela0@gmail.com>
+ @copyright  2015 Emeka Osuagwu
+ @license    MIT License <http://opensource.org/licenses/MIT>   
+ -->
 
-@endsection
-
-@section('content')
-
-
-    <br><br><br><br>
-    <div class="container">
+<div class="container">
         <div class="top_grid">
-            @foreach( $categorys as $video )
-            <div class="col-md-3 margin-1" >
+            @foreach( $data['feature'] as $video )
+            <div class="col-md-3">
                 <div class="grid1">
                     <div class="view view-first">
                         <div class="index_img1">
@@ -22,7 +20,7 @@
                     </div> 
 
                     <div class="inner_wrap">
-                        <a href="video/{{$video->category}}/{{$video->id}}"> 
+                        <a href="{{$video->id}}"> 
                             <h3>{{$video->title}}</h3>    
                         </a>
                     </div>
@@ -30,15 +28,5 @@
             </div>
             @endforeach
             <div class="clearfix"> </div>
-        </div>
-    </div>
-
-	<!--
-	| include offering section to home page
-	| @location includes/sections/offering.blade.php
-	 -->
-    @include('app.includes.sections.offering')
-
-@endsection
-
-
+        </div>    
+</div>

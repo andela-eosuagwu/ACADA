@@ -11,33 +11,67 @@
 |
 */
 
-Route::get('/', function () {
-    return view('app.pages.index');
-});
 
-Route::get('/', function () {
-    return view('app.pages.index');
-});
+Route::get('/', [
+    'uses' => 'VideoController@index',
+    'as'   => '/'
+]);
 
 Route::get('/contact', function () {
     return view('app.pages.contact');
 });
 
-Route::get('video', function () {
-    return "all videos";
-});
-
-Route::get('/video/{category}', function ($category) {
-    return view('app.pages.category');
-});
-
-Route::get('/video/{category}/{id}', function ($category, $id) {
-	return view('app.pages.play_video');
-});
+Route::get('search', [
+    'uses' => 'SearchController@index',
+    'as'   => 'search'
+]);
 
 
+Route::get('create', [
+    'uses' => 'VideoController@create',
+    'as'   => 'create'
+]);
 
-Route::post('signup', [
+Route::get('createpost', [
+    'uses' => 'VideoController@store',
+    'as'   => 'createpost'
+]);
+
+
+
+
+
+
+
+
+Route::get('video', [
+    'uses' => 'VideoController@index',
+    'as'   => 'video'
+]);
+
+Route::get('video/{category}', [
+    'uses' => 'VideoController@category',
+    'as'   => 'video'
+]);
+
+Route::get('video/{category}/{id}', [
+    'uses' => 'VideoController@show',
+    'as'   => 'video'
+]);
+
+
+
+Route::get('signup', [
     'uses' => 'Auth\AuthController@postSignup',
-    'as'   => 'passwordreset'
+    'as'   => 'signup'
+]);
+
+Route::get('signin', [
+    'uses' => 'Auth\AuthController@postSignin',
+    'as'   => 'signin'
+]);
+
+Route::get('logout', [
+    'uses' => 'Auth\AuthController@getLogout',
+    'as'   => 'logout'
 ]);

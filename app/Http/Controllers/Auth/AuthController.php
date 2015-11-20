@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Auth;
 use App\User;
 use Validator;
 use Illuminate\Http\Request;
@@ -33,21 +34,6 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
-    }
-
-    /**
-     * Get a validator for an incoming registration request.
-     *
-     * @param  array  $data
-     * @return \Illuminate\Contracts\Validation\Validator
-     */
-    protected function validator(array $data)
-    {
-        return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:6',
-        ]);
     }
 
     /**
@@ -94,7 +80,49 @@ class AuthController extends Controller
         };
 
         return $response;
+    }
 
+    /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param  array  $data
+     * @return User
+     */
+    protected function postSignin(Request $request)
+    {
+        $status = Auth::attempt($request->only(['username', 'password']));
+        
+        if ( ! $status )
+        {
+            $response =
+            [
+                "message"       => "login failed",
+                "status_code"   => 401,
+            ];
+        }
+        else
+        {
+            $response =
+            [
+                "message"       => "login success",
+                "status_code"   => 200,
+            ];
+        }
+
+        return $response;
+    }
+
+    /**
+     * Logout current user.
+     *
+     * @param Request $request
+     *
+     * @return home
+     */
+    public function getLogout()
+    {
+        Auth::logout();
+        return redirect('/');
     }
 
 }
