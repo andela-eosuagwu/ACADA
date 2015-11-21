@@ -1,11 +1,11 @@
-
-## Learner Tube is a PHP project that provides a platform for sharing video tutorials
-
 [![Build Status](https://travis-ci.org/andela-vdugeri/learner-tube.png?branch=master)](http://travis-ci.org/andela-vdugeri/learner-tube)
+
+# ACADA
+ACADA is an open source-like community built on PHP that allows different developers share links of helpful videos.
 
 ## Contributing
 
-Thank you for considering contributing to the Learner Tube project! The contribution guide can be found in the [Contributing file](CONTRIBUTING.md).
+Thank you for considering contributing to project ACADA! The contribution guide can be found in the [Contributing file](CONTRIBUTING.md).
 
 ##Usage
 
@@ -17,7 +17,7 @@ To download and use this project you need to have the following installed on you
 
 When you have succesfully completed the above processes, you can run:
 ```bash
-git clone https://github.com/andela-vdugeri/learner-tube.git
+git clone https://github.com/andela-andela-eosuagwu/acada.git
 `````
 to clone the repository to your working directory. This step presumes that you have git set up and running.
 
@@ -42,7 +42,7 @@ Now you are set up and ready to run.
 - Browse videos by category
 - view single video
 
-You can visit [learner-tube demo page](https://learner-tube.herokuapp.com/) to view the project demo.
+You can visit [acada demo page](acada.herokuapp.com/) to view the project demo.
 
 
 ## Security Vulnerabilities
