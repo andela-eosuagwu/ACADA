@@ -35,6 +35,8 @@ class OauthController extends Controller
         return $this->userHasLoggedIn();
     }
 
+
+
     /**
      * checkUserExist Check if user details already exist
      * @param  $value
