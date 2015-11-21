@@ -7,11 +7,13 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class LoginPageTest extends TestCase
 {
-	
+
     public function testExample()
     {
         $this->assertTrue(true);
     }
+
+
 
 	/**
 	 * Test if a user can log in to the system
