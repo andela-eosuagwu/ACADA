@@ -66,7 +66,7 @@
             
             <a href="#" id="registerButton"><img src="{{ asset('res/images/login.png') }}"><span>Register</span></a>     
             <div id="registerBox" style="margin-left:">                
-                <form action="signup" method="post" id="registerForm">
+                <form action="signup" method="get" id="registerForm">
                     <input type="hidden" name="_token" value="{!! csrf_token() !!}">
                     <fieldset id="body">
                         <fieldset>

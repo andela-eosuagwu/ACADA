@@ -61,7 +61,7 @@ Route::get('video/{category}/{id}', [
 ]);
 
 
-Route::post('signup', [
+Route::get('signup', [
     'uses' => 'Auth\AuthController@postSignup',
     'as'   => 'signup'
 ]);
