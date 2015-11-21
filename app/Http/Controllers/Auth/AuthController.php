@@ -72,11 +72,8 @@ class AuthController extends Controller
         }
         else
         {
-            $response = [
-                "message"       => "Registration Successful",
-                "status_code"   => 200
-            ];
             $this->create($request->all());
+            return redirect('/');
         };
 
         return $response;
@@ -102,11 +99,7 @@ class AuthController extends Controller
         }
         else
         {
-            $response =
-            [
-                "message"       => "login success",
-                "status_code"   => 200,
-            ];
+            return redirect('/');
         }
 
         return $response;

@@ -22,13 +22,6 @@ Route::get('/contact', function () {
 });
 
 
-
-
-
-
-
-
-
 Route::get('search', [
     'uses' => 'SearchController@index',
     'as'   => 'search'
@@ -66,12 +59,12 @@ Route::get('view', [
 ]);
 
 
-Route::get('signup', [
+Route::post('signup', [
     'uses' => 'Auth\AuthController@postSignup',
     'as'   => 'signup'
 ]);
 
-Route::get('signin', [
+Route::post('signin', [
     'uses' => 'Auth\AuthController@postSignin',
     'as'   => 'signin'
 ]);

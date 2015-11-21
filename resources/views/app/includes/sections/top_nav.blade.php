@@ -41,7 +41,7 @@
             @if( ! Auth::check() )
             <a href="#" id="loginButton"><img src="{{ asset('res/images/login.png') }}"><span>Login</span></a>
             <div id="loginBox">                
-                <form action="signin" method="get" id="loginForm">
+                <form action="signin" method="post" id="loginForm">
                     <input type="hidden" name="_token" value="{!! csrf_token() !!}">
                     <fieldset id="body">
                         <fieldset>
@@ -66,7 +66,7 @@
             
             <a href="#" id="registerButton"><img src="{{ asset('res/images/login.png') }}"><span>Register</span></a>     
             <div id="registerBox" style="margin-left:">                
-                <form action="signup" method="get" id="registerForm">
+                <form action="signup" method="post" id="registerForm">
                     <input type="hidden" name="_token" value="{!! csrf_token() !!}">
                     <fieldset id="body">
                         <fieldset>
@@ -96,7 +96,7 @@
             @endif
             
             @if( Auth::check() )
-                @if( is_null(Auth::user()->avater) || Auth::user()->avater == '')
+                @if( is_null(Auth::user()->avater) || Auth::user()->avater == '' )
                     <a href="/user/{{Auth::user()->id}}" id=""><img style = "width:40px; margin-top:-14px;" src="{{ asset('res/images/profile.png') }}"><span>{{Auth::user()->username}}</span></a>     
                 @endif
                 <a href="/user/{{Auth::user()->id}}" id=""><img style = "width:50px; margin-top:-10px;"src="{{ Auth::user()->avater }}"><span>{{Auth::user()->username}}</span></a>     
