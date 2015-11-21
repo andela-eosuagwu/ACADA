@@ -7,7 +7,7 @@
                     <div class="view view-first">
                         <div class="index_img1">
                             <center>
-                                <img src="res/images/{{$video->category}}.png" class="img-responsive" alt="">
+                                <img style ="width:200px;" src="res/images/{{$video->category}}.png" class="img-responsive" alt="">
                             </center>
                         </div>
                     </div> 

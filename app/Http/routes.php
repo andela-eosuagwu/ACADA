@@ -60,6 +60,11 @@ Route::get('video/{category}/{id}', [
     'as'   => 'video'
 ]);
 
+Route::get('view', [
+    'uses' => 'VideoController@user',
+    'as'   => 'view'
+]);
+
 
 Route::get('signup', [
     'uses' => 'Auth\AuthController@postSignup',

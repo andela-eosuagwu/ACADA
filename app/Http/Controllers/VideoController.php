@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Video;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 
 class VideoController extends Controller
@@ -33,9 +35,10 @@ class VideoController extends Controller
     protected function save(array $data)
     {
         Video::create([
-            'category'  => $data['category'],
+            'src'       => $data['src'],
             'title'     => $data['title'],
-            'src'       => $data['src']
+            'user_id'   => Auth::user()->id,
+            'category'  => $data['category'],
         ]);
     }
 
@@ -66,15 +69,8 @@ class VideoController extends Controller
         return view('app.pages.category', compact('categorys'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($category, $id)
     {
-        //$video = Video::all()->where('category', 'php')->find($id);
         $video      = Video::all()->where('category', $category)->find($id);
         $feature    = Video::all()->where('category', $category)->take(4);
         
@@ -87,37 +83,17 @@ class VideoController extends Controller
         return view('app.pages.play_video', compact('data'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+
+    public function user()
     {
-        //
+        $categorys =  User::all();
+
+        foreach ($categorys as $value) 
+        {
+            $categorys = $value->video;
+        }
+
+        return view('app.pages.view', compact('categorys'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
 }

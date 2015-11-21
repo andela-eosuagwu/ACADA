@@ -19,6 +19,7 @@
                     <br>
                     <p>
                         <a href="/user/edit/{{Auth::user()->id}}" class="btn  btn-primary" role="button">Edit Profile</a> 
+                        <a href="/view" class="btn  btn-primary" role="button">My Videos</a> 
                     </p>
                 </div>
             </div>    
