@@ -55,9 +55,12 @@
                         </fieldset>
 
                         <input type="submit" id="login" value="Sign in">
-                        <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+                        <a href="/login/twitter"  id="login"></a>
+                        <input type="submit" id="login" value="twitter">
+                        <input type="submit" id="login" value="github">
+                        
                     </fieldset>
-                    <span><a href="#">Forgot your password?</a></span>
+
                 </form>
             </div>
             
@@ -82,16 +85,19 @@
                         </fieldset>
 
                         <input type="submit" id="register" value="Sign in">
-                        <label for="checkbox"><input type="checkbox" id="checkbox"> <i>Remember me</i></label>
+                        <input type="submit" id="register" value="Sign in">
+                        <input type="submit" id="register" value="Sign in">
+                        <input type="submit" id="register" value="Sign in">
+                        
                     </fieldset>
-                    <span><a href="#">Forgot your password?</a></span>
+                    
                 </form>
             </div>
             @endif
             
             @if( Auth::check() )
-                <a href="#" id=""><img src="{{ asset('res/images/login.png') }}"><span>{{Auth::user()->username}}</span></a>     
-                <a href="/logout" id=""><span>logout</span></a>     
+                <a href="#" id=""><img style = "width:50px; margin-top:-10px;"src="{{ asset('res/images/php.png') }}"><span>{{Auth::user()->username}}</span></a>     
+                <a style ="margin-left:40px;" href="/logout" id=""><span>logout</span></a>     
             @endif
         </div>
         <div class="clearfix"></div>

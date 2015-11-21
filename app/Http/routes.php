@@ -75,3 +75,7 @@ Route::get('logout', [
     'uses' => 'Auth\AuthController@getLogout',
     'as'   => 'logout'
 ]);
+
+
+
+Route::get('/login/{provider}', 'OauthController@getSocialRedirect');
