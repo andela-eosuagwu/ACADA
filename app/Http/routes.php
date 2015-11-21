@@ -21,6 +21,14 @@ Route::get('/contact', function () {
     return view('app.pages.contact');
 });
 
+
+
+
+
+
+
+
+
 Route::get('search', [
     'uses' => 'SearchController@index',
     'as'   => 'search'
@@ -36,13 +44,6 @@ Route::get('createpost', [
     'uses' => 'VideoController@store',
     'as'   => 'createpost'
 ]);
-
-
-
-
-
-
-
 
 Route::get('video', [
     'uses' => 'VideoController@index',
@@ -60,8 +61,7 @@ Route::get('video/{category}/{id}', [
 ]);
 
 
-
-Route::get('signup', [
+Route::post('signup', [
     'uses' => 'Auth\AuthController@postSignup',
     'as'   => 'signup'
 ]);
@@ -75,6 +75,31 @@ Route::get('logout', [
     'uses' => 'Auth\AuthController@getLogout',
     'as'   => 'logout'
 ]);
+
+Route::get('user/{id}', [
+    'uses' => 'UserController@index',
+    'as'   => 'user'
+]);
+
+Route::get('user/edit/{id}', [
+    'uses' => 'UserController@edit',
+    'as'   => 'user'
+]);
+
+Route::post('user/update', [
+    'uses' => 'UserController@update',
+    'as'   => 'user.update',
+    'middleware'=> ['auth']
+]);
+
+
+
+
+
+
+
+
+
 
 
 
