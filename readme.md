@@ -1,7 +1,5 @@
 [![Build Status](https://travis-ci.org/andela-eosuagwu/ACADA.svg?branch=staging)](https://travis-ci.org/andela-eosuagwu/ACADA)
-
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/andela-eosuagwu/ACADA/badges/quality-score.png?b=staging)](https://scrutinizer-ci.com/g/andela-eosuagwu/ACADA/?branch=staging)
-
 [![Build Status](https://scrutinizer-ci.com/g/andela-eosuagwu/ACADA/badges/build.png?b=staging)](https://scrutinizer-ci.com/g/andela-eosuagwu/ACADA/build-status/staging)
 
 # ACADA
