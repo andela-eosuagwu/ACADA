@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/andela-vdugeri/learner-tube.png?branch=master)](http://travis-ci.org/andela-vdugeri/learner-tube)
+[![Build Status](https://travis-ci.org/andela-eosuagwu/ACADA.svg?branch=staging)](https://travis-ci.org/andela-eosuagwu/ACADA)
 
 # ACADA
 ACADA is an open source-like community built on PHP that allows different developers share links of helpful videos.
