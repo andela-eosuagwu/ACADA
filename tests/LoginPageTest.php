@@ -23,7 +23,6 @@ class LoginPageTest extends TestCase
         return $user;
     }
 
-
 	public function testLoginFormWorksCorrectly()
 	{
 		$this->createUser();

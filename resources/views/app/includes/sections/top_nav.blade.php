@@ -56,8 +56,8 @@
 
                         <input type="submit" id="login" value="Sign in">
                         <a href="/login/facebook"  id="login"></a>
-                        <input type="submit" id="login" value="twitter">
-                        <input type="submit" id="login" value="github">
+                        <a href="/login/twitter"  id="login"></a>
+                        <a href="/login/github"  id="login"></a>
                         
                     </fieldset>
 
