@@ -19,21 +19,14 @@ class EditProfileTest extends TestCase
 
 	public function testEditProfilePageLoadsCorrectly()
 	{
-		$user = factory(User::class)->create();
-		$this->actingAs($user)
-		  ->withSession(['name' => 'johndoe'])
-		  ->visit('/user/update');	
+
+        User::where('id', 1)->update(['avater'      => 'avater']);
+        User::where('id', 1)->update(['username'    => "username"]);
+        User::where('id', 1)->update(['occupation'  => "occupation"]);
+        return redirect('user/1');
+		
 		$this->call('GET', 'user/edit/1');
 		$this->assertResponseOk();
 	}
 
-	public function createUser()
-	{
-		return User::create([
-            'src'       => "link",
-            'title'     => "title",
-            'user_id'   => 1,
-            'category'  => "java",
-		]);
-	}
 }
