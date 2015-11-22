@@ -55,10 +55,9 @@
                         </fieldset>
 
                         <input type="submit" id="login" value="Sign in">
-                        <a href="/login/facebook"  id="login"></a>
-                        <a href="/login/twitter"  id="login"></a>
-                        <a href="/login/github"  id="login"></a>
-                        
+                        <a href="/login/facebook"  id="login">Facebook</a>
+                        <a href="/login/twitter"  id="login">Twitter</a>
+                        <a href="/login/github"  id="login">Github</a>
                     </fieldset>
 
                 </form>
@@ -85,9 +84,9 @@
                         </fieldset>
 
                         <input type="submit" id="register" value="Sign in">
-                        <input type="submit" id="register" value="Sign in">
-                        <input type="submit" id="register" value="Sign in">
-                        <input type="submit" id="register" value="Sign in">
+                        <a href="/register/facebook"  id="register">Facebook</a>
+                        <a href="/register/twitter"  id="register">Twitter</a>
+                        <a href="/register/github"  id="register">Github</a>
                         
                     </fieldset>
                     
