@@ -13,32 +13,29 @@ class LoginPageTest extends TestCase
         $this->assertTrue(true);
     }
 
+    protected function createUser ()
+    {
+        $user = App\User::create([
+            'username' => 'test',
+            'password' => 'test',
+            'email' => 'test@test.com'
+        ]);
+        return $user;
+    }
 
 
-	/**
-	 * Test if a user can log in to the system
-	 *
-	 * This test presumes that the user exists
-	 */
-	// public function testLoginFormWorksCorrectly()
-	// {
-	// 	//create a user
-	// 	$this->createUser();
+	public function testLoginFormWorksCorrectly()
+	{
+		$this->createUser();
+        $user = Auth::attempt(['username' => 'test', 'password' => 'test']);
+        $this->assertEquals(1, sizeof($user));
+	}
 
-	// 	$this->visit('/login')
-	// 		->type('john@doe.com','email')
-	// 		->type('password', 'password')
-	// 		->press('submit')
-	// 		->seePageIs('/');
-	// }
+    public function testForCreatingOneUser()
+    {
+        $this->createUser();
+        $user = App\User::all();
+        $this->assertEquals(1, sizeof($user));
+    }
 
-
-	// public function createUser()
-	// {
-	// 	User::create([
-	// 	  'name' => 'johndoe',
-	// 	  'email' => 'john@doe.com',
-	// 	  'password'=> bcrypt('password')
-	// 	]);
-	// }
 }

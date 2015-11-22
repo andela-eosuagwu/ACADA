@@ -37,4 +37,10 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
 		Artisan::call('migrate:refresh');
 	}
 
+    public function tearDown()
+    {
+        $this->createApplication();
+        Artisan::call('migrate:rollback');
+    }
+
 }
