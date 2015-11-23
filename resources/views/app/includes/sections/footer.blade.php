@@ -1,6 +1,6 @@
 <div class="footer">
     <div class="container">
-        <div class="footer_top">
+<!--         <div class="footer_top">
             <h3>Subscribe to our newsletter</h3>
             <form>
             <span>
@@ -10,10 +10,10 @@
             <div class="clearfix"> </div>
             </span>                 
             </form>
-        </div>
+        </div> -->
         <div class="footer_grids">
             <div class="footer-grid">
-                <h4>Ipsum Quis</h4>
+                <h4>Site Map</h4>
                 <ul class="list1">
                     <li><a href="contact">Contact</a></li>
                     <li><a href="about">About</a></li>
