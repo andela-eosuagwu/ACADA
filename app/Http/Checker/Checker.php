@@ -17,4 +17,11 @@ class Checker
 		return count($checkByUserName) ? "present" : "absent";
 	}
 
+	public static function checkByOauth ($id)
+	{
+		$checkByOauth  = User::where('oauth', '=', $id)->get(); 
+		
+		return count($checkByOauth) ? "present" : "absent";
+	}
+
 }

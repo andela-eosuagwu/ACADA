@@ -101,4 +101,4 @@ Route::post('user/update', [
 
 
 
-Route::get('/login/{provider}', 'OauthController@getSocialRedirect');
+Route::get('/login/{provider}', 'OauthController@getSocialLogin');
