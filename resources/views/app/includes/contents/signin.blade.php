@@ -24,8 +24,8 @@
                 
                     <button type="submit" class="btn btn-primary">Login</button>
                     <a href="/login/facebook" class="btn btn-primary">Facebook</a>
-                    <button type="submit" class="btn btn-primary">Twitter</button>
-                    <button type="submit" class="btn btn-primary">Github</button>
+                    <a href="/login/twitter" class="btn btn-primary">Twitter</a>
+                    <a href="/login/github" class="btn btn-primary">Github</a>
                 
                 </fieldset>
             </form>
