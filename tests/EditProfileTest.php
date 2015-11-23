@@ -17,7 +17,7 @@ class EditProfileTest extends TestCase
         User::where('id', 1)->update(['avater'      => 'avater']);
         User::where('id', 1)->update(['username'    => "username"]);
         User::where('id', 1)->update(['occupation'  => "occupation"]);
-		$this->call('GET', 'user/edit/1');
+		return $this->call('GET', 'user/edit/1');
 		$this->assertResponseOk();
 	}
 
