@@ -76,7 +76,7 @@ class VideoController extends Controller
     public function show($category, $id)
     {
         $video      = Video::all()->where('category', $category)->find($id);
-        $feature    = Video::all()->where('category', $category)->take(4);
+        $feature    = Video::all()->where('category', $category)->random()->take(4);
         
         $data = 
         [
