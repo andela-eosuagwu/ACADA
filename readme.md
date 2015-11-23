@@ -52,4 +52,4 @@ If you discover a security vulnerability within Learner Tube, please send an e-m
 
 ### License
 
-The Learner Tube is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+ACADA is an open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
