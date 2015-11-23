@@ -102,15 +102,4 @@ Route::post('user/update', [
     'middleware'=> ['auth']
 ]);
 
-
-
-
-
-
-
-
-
-
-
-
 Route::get('/login/{provider}', 'OauthController@getSocialLogin');

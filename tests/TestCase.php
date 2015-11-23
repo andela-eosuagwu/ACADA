@@ -11,7 +11,6 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
      */
     protected $baseUrl = 'http://localhost:8000/';
 
-
 	public function setUp()
 	{
 		parent::setUp();

@@ -14,12 +14,9 @@ class EditProfileTest extends TestCase
 
 	public function testEditProfilePageLoadsCorrectly()
 	{
-
         User::where('id', 1)->update(['avater'      => 'avater']);
         User::where('id', 1)->update(['username'    => "username"]);
         User::where('id', 1)->update(['occupation'  => "occupation"]);
-        return redirect('user/1');
-		
 		$this->call('GET', 'user/edit/1');
 		$this->assertResponseOk();
 	}
