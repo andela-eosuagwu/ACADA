@@ -21,6 +21,10 @@ Route::get('/contact', function () {
     return view('app.pages.contact');
 });
 
+Route::get('/contact', function () {
+    return view('app.pages.contact');
+});
+
 
 Route::get('search', [
     'uses' => 'SearchController@index',
@@ -58,16 +62,24 @@ Route::get('view', [
     'as'   => 'view'
 ]);
 
+Route::get('login', function () {
+    return view('app.pages.signin');
+});
+
+Route::get('register', function () {
+    return view('app.pages.signup');
+});
+
+Route::get('signin', [
+    'uses' => 'Auth\AuthController@postSignin',
+    'as'   => 'signin'
+]);
 
 Route::post('signup', [
     'uses' => 'Auth\AuthController@postSignup',
     'as'   => 'signup'
 ]);
 
-Route::post('signin', [
-    'uses' => 'Auth\AuthController@postSignin',
-    'as'   => 'signin'
-]);
 
 Route::get('logout', [
     'uses' => 'Auth\AuthController@getLogout',

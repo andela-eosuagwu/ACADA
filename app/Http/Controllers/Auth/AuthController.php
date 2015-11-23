@@ -63,12 +63,10 @@ class AuthController extends Controller
         $username   = $request['username'];
         $password   = $request['password'];
 
-        if ( Checker::checkByUserName($username) === "present") 
+        if ( Checker::checkByUserEmail($email) === "present" || Checker::checkByUserName($username) === "present") 
         {
-            $response = [
-                "message"       => "Registration Failed",
-                "status_code"   => 401
-            ];
+            $response = "Failed";
+            return view('app.pages.signup', compact('response'));
         }
         else
         {
@@ -91,11 +89,8 @@ class AuthController extends Controller
         
         if ( ! $status )
         {
-            $response =
-            [
-                "message"       => "login failed",
-                "status_code"   => 401,
-            ];
+            $response = "Failed";
+            return view('app.pages.signin', compact('response'));
         }
         else
         {

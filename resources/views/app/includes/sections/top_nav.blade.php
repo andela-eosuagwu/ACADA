@@ -39,61 +39,11 @@
         <div id="loginContainer">
             
             @if( ! Auth::check() )
-            <a href="#" id="loginButton"><img src="{{ asset('res/images/login.png') }}"><span>Login</span></a>
-            <div id="loginBox">                
-                <form action="signin" method="post" id="loginForm">
-                    <input type="hidden" name="_token" value="{!! csrf_token() !!}">
-                    <fieldset id="body">
-                        <fieldset>
-                            <label for="email">Username</label>
-                            <input type="text" name="username" id="email">
-                        </fieldset>
-                        
-                        <fieldset>
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password">
-                        </fieldset>
-
-                        <input type="submit" id="login" value="Sign in">
-                        <a href="/login/facebook"  id="login">Facebook</a>
-                        <a href="/login/twitter"  id="login">Twitter</a>
-                        <a href="/login/github"  id="login">Github</a>
-                    </fieldset>
-
-                </form>
-            </div>
-            
-            <a href="#" id="registerButton"><img src="{{ asset('res/images/login.png') }}"><span>Register</span></a>     
-            <div id="registerBox" style="margin-left:">                
-                <form action="signup" method="post" id="registerForm">
-                    <input type="hidden" name="_token" value="{!! csrf_token() !!}">
-                    <fieldset id="body">
-                        <fieldset>
-                            <label for="email">Username</label>
-                            <input type="text" name="username" id="email">
-                        </fieldset>
-                        
-                        <fieldset>
-                            <label for="password">Email</label>
-                            <input type="email" name="email" id="password">
-                        </fieldset>
-
-                        <fieldset>
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password">
-                        </fieldset>
-
-                        <input type="submit" id="register" value="Sign in">
-                        <a href="/register/facebook"  id="register">Facebook</a>
-                        <a href="/register/twitter"  id="register">Twitter</a>
-                        <a href="/register/github"  id="register">Github</a>
-                        
-                    </fieldset>
-                    
-                </form>
-            </div>
+            <a href="/login" id=""><img src="{{ asset('res/images/login.png') }}"><span>Login</span></a>
+            <a href="/register" id=""><img src="{{ asset('res/images/login.png') }}"><span>Register</span></a>     
             @endif
             
+
             @if( Auth::check() )
                 @if( is_null(Auth::user()->avater) || Auth::user()->avater == '' )
                     <a href="/user/{{Auth::user()->id}}" id=""><img style = "width:40px; margin-top:-14px;" src="{{ asset('res/images/profile.png') }}"><span>{{Auth::user()->username}}</span></a>     

@@ -9,9 +9,16 @@
         
         <link href="{{ asset('res/css/style.css')  }}" rel='stylesheet' type='text/css' />
         <link href="{{ secure_asset('res/css/style.css')  }}" rel='stylesheet' type='text/css' />
-        
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         
+
+        <!-- sweet -->
+        <link href="{{ asset('res/sweetalert/sweetalert.css')  }}" rel='stylesheet' type='text/css' />
+        <link href="{{ secure_asset('res/sweetalert/sweetalert.css')  }}" rel='stylesheet' type='text/css' />
+
+        <script type="text/javascript" src="{{ asset('res/sweetalert/sweetalert.min.js')  }}"></script>
+        <script type="text/javascript" src="{{ secure_asset('res/sweetalert/sweetalert.min.js')  }}"></script>
+
         <!-- custom -->
         <link href="{{ asset('res/css/custom.css')  }}" rel='stylesheet' type='text/css' />
         <link href="{{ secure_asset('res/css/custom.css')  }}" rel='stylesheet' type='text/css' />
