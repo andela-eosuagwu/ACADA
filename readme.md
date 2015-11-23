@@ -14,7 +14,7 @@ Thank you for considering contributing to project ACADA! The contribution guide 
 To download and use this project you need to have the following installed on your machine
 - Composer
   for instructions on how to install composer visit the [official website](https://getcomposer.org/doc/00-intro.md) for installation instructions
-- Laravel homestead
+- Laravel
   visit the [Laravel website](http://laravel.com/docs/5.1/homestead) for installation and set up instructions.
 
 When you have succesfully completed the above processes, you can run:
