@@ -15,7 +15,7 @@
  -->
 
 <div class="header">
-    <div class="col-sm-8 header-left">
+    <div class="col-sm-7 header-left">
         
         <div class="logo">
             <a href="/">
@@ -35,7 +35,7 @@
         <div class="clearfix"></div>
     </div>
     
-    <div class="col-sm-4 header_right">
+    <div class="col-sm-5 header_right">
         <div id="loginContainer">
             
             @if( ! Auth::check() )
