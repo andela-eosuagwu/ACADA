@@ -39,7 +39,6 @@ Now you are set up and ready to run.
   social mediation authentication
 - User Profile Management
 - Youtube Video embedding - Authenticated users only
-- Addition of new categories - Authenticated users only
 - Browse all videos
 - Browse videos by category
 - view single video
