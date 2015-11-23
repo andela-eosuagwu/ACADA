@@ -55,6 +55,10 @@ class VideoController extends Controller
         $category   =  $request['category'];
 
         $this->save($request->all());
+        
+        $response = "success";
+        return view('app.pages.create', compact('response'));
+
     }
 
     /**

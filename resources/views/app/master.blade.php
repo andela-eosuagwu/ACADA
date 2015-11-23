@@ -67,5 +67,12 @@
         <script> new UISearch( document.getElementById( 'sb-search' ) ); </script>
         <script type="text/javascript" src="{{ asset('res/js/responsive-nav.js') }}"></script>
         <script type="text/javascript" src="{{ secure_asset('res/js/responsive-nav.js') }}"></script>
+    
+        <script type="text/javascript">
+        function cantupload()
+        {
+            swal("Opps", "I'm sure you have to login to do that", "error")
+        }
+        </script>
     </body>
 </html>
