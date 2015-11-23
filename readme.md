@@ -48,7 +48,7 @@ You can visit [acada demo page](acada.herokuapp.com/) to view the project demo.
 
 ## Security Vulnerabilities
 
-If you discover a security vulnerability within project ACADA, please send an e-mail to Verem Dugeri at emekaosuagwuandela@gmail.com. All security vulnerabilities will be promptly addressed.
+If you discover a security vulnerability within project ACADA, please send an e-mail to Emeka Osuagwu at emekaosuagwuandela@gmail.com. All security vulnerabilities will be promptly addressed.
 
 ### License
 
