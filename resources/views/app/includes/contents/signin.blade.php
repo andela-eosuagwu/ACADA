@@ -8,7 +8,7 @@
     <div class="content_middle_bo">
         <div style="margin-left:335px; margin-top:100px;" class="col col-sm-5">
 
-            <form method="get" action="/signin">
+            <form method="post" action="/signin">
                 {!! csrf_field() !!}
                 <div class="form-group">
                     <label class="control-label">Username</label>

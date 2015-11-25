@@ -26,12 +26,12 @@ Route::group(['prefix' => '/'], function () {
         return view('app.pages.signup');
     });
 
-    Route::get('/signin', [
+    Route::post('/signin', [
         'uses' => 'Auth\AuthController@postSignin',
         'as'   => 'signin'
     ]);
 
-    Route::get('signup', [
+    Route::post('signup', [
         'uses' => 'Auth\AuthController@postSignup',
         'as'   => 'signup'
     ]);
