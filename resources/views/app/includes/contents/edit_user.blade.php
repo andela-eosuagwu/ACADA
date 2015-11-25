@@ -33,7 +33,7 @@
                 </div>
                 
                 <button type="submit" class="btn btn-primary ">Update</button>
-                <a href="/user">Profile</a>
+                <a href="/user/1">Profile</a>
             </form> 
         </div>    
         

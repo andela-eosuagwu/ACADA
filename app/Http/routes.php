@@ -85,7 +85,7 @@ Route::get('view', [
 ]);
 
 
-Route::get('user', [
+Route::get('user/{id}', [
     'uses' => 'UserController@index',
     'as'   => 'user'
 ]);
