@@ -13,14 +13,14 @@ use Illuminate\Contracts\Auth\Guard;
 
 class OauthController extends Controller
 {
+    private 
+    $auth,
+    $oauth_data;
 
-    private $auth;
     public function __construct(Guard $auth)
     {
         $this->auth = $auth;
     }
-
-    private $oauth_data;
 
     public function getSocialLogin(AuthenticateUser $authenticate, Request $request, $provider )
     {
@@ -30,6 +30,7 @@ class OauthController extends Controller
     public function userAuthenticated( $user )
     {
         $authUser = $this->findBySocaialIdOrCreate($user);
+
         $this->auth->login($authUser,true);
         return redirect('/');
     }
@@ -58,7 +59,6 @@ class OauthController extends Controller
         $authUser->password = bcrypt($user->id);
         $authUser->oauth = $user->id;
         $authUser->avater = $user->avatar;
-
 
         return $authUser;
     }

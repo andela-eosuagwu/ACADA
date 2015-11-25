@@ -11,14 +11,37 @@
 |
 */
 
-
 Route::get('/', [
     'uses' => 'VideoController@index',
     'as'   => '/'
 ]);
 
-Route::get('/contact', function () {
-    return view('app.pages.contact');
+Route::group(['prefix' => '/'], function () {
+
+    Route::get('login', function () {
+        return view('app.pages.signin');
+    });
+
+    Route::get('register', function () {
+        return view('app.pages.signup');
+    });
+
+    Route::get('/signin', [
+        'uses' => 'Auth\AuthController@postSignin',
+        'as'   => 'signin'
+    ]);
+
+    Route::get('signup', [
+        'uses' => 'Auth\AuthController@postSignup',
+        'as'   => 'signup'
+    ]);
+
+
+    Route::get('logout', [
+        'uses' => 'Auth\AuthController@getLogout',
+        'as'   => 'logout'
+    ]);
+
 });
 
 Route::get('/contact', function () {
@@ -30,7 +53,6 @@ Route::get('search', [
     'uses' => 'SearchController@index',
     'as'   => 'search'
 ]);
-
 
 Route::get('create', [
     'uses' => 'VideoController@create',
@@ -62,29 +84,6 @@ Route::get('view', [
     'as'   => 'view'
 ]);
 
-Route::get('login', function () {
-    return view('app.pages.signin');
-});
-
-Route::get('register', function () {
-    return view('app.pages.signup');
-});
-
-Route::get('signin', [
-    'uses' => 'Auth\AuthController@postSignin',
-    'as'   => 'signin'
-]);
-
-Route::post('signup', [
-    'uses' => 'Auth\AuthController@postSignup',
-    'as'   => 'signup'
-]);
-
-
-Route::get('logout', [
-    'uses' => 'Auth\AuthController@getLogout',
-    'as'   => 'logout'
-]);
 
 Route::get('user/{id}', [
     'uses' => 'UserController@index',
