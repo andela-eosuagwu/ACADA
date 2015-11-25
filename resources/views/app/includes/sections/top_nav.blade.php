@@ -48,7 +48,10 @@
                 @if( is_null(Auth::user()->avater) || Auth::user()->avater == '' )
                     <a href="/user/{{Auth::user()->id}}" id=""><img style = "width:40px; margin-top:-14px;" src="{{ asset('res/images/profile.png') }}"><span>{{Auth::user()->username}}</span></a>     
                 @endif
-                <a href="/user/{{Auth::user()->id}}" id=""><img style = "width:50px; margin-top:-10px;"src="{{ Auth::user()->avater }}"><span>{{Auth::user()->username}}</span></a>     
+                @if( ! is_null(Auth::user()->avater) )
+                    <a href="/user/{{Auth::user()->id}}" id=""><img style = "width:50px; margin-top:-10px;"src="{{ Auth::user()->avater }}"><span>{{Auth::user()->username}}</span></a>     
+                @endif
+
                 <a style ="margin-left:40px;" href="/logout" id=""><span>logout</span></a>     
             @endif
         </div>
