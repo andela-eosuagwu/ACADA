@@ -11,8 +11,8 @@
             <form method="get" action="/signin">
                 {!! csrf_field() !!}
                 <div class="form-group">
-                    <label class="control-label">E-mail</label>
-                    <input class="form-control" type="text" name="email" value="{{ old('email') }}">
+                    <label class="control-label">Username</label>
+                    <input class="form-control" type="text" name="username" value="{{ old('email') }}">
                 </div>
 
                 <div class="form-group">
