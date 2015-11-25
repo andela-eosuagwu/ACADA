@@ -59,7 +59,7 @@ Route::get('create', [
     'as'   => 'create'
 ]);
 
-Route::get('createpost', [
+Route::post('createpost', [
     'uses' => 'VideoController@store',
     'as'   => 'createpost'
 ]);

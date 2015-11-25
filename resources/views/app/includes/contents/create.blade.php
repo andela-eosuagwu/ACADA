@@ -6,7 +6,7 @@
 <div class="living_middle wow fadeInUp" data-wow-delay="0.4s">
     <div class="container">
         <h2>Post Video</h2>
-        <form method="get" action="createpost">
+        <form method="post" action="createpost">
             <div class="to">
                 <input type="text" name="title" class="text" placeholder = "Video title">
                 
