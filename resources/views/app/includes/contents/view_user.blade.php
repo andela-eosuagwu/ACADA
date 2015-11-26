@@ -9,7 +9,7 @@
                         </a>
                     @else
                         <a href="#" class="thumbnail">
-                            <img src="{{ Auth::user()->avater }}" alt="...">
+                            <img src="{{ Auth::user()->avatar}}" alt="...">
                         </a>
                     @endif
                     <h1>{{Auth::user()->username}}</h1>
