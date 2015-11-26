@@ -18,8 +18,8 @@
                     <p>{{Auth::user()->email}}</p>
                     <br>
                     <p>
-                        <a href="/user/edit/{{Auth::user()->id}}" class="btn  btn-primary" role="button">Edit Profile</a> 
-                        <a href="/view" class="btn  btn-primary" role="button">My Videos</a> 
+                        <a href="/user/edit}}" class="btn  btn-primary" role="button">Edit Profile</a> 
+                        <a href="/user" class="btn  btn-primary" role="button">My Videos</a> 
                     </p>
                 </div>
             </div>    

@@ -73,5 +73,15 @@ class VideoController extends Controller
         return view('app.pages.play_video', compact('video'));
     }
 
+    public function user()
+    {
+        $categories =  User::all();
+        foreach ($categories as $value) 
+        {
+            $categories = $value->video;
+        }
+        return view('app.pages.view', compact('categories'));
+    }
+
 
 }

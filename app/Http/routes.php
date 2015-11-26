@@ -16,6 +16,10 @@ Route::get('/', [
     'as'   => '/'
 ]);
 
+Route::get('/contact', function () {
+    return view('app.pages.contact');
+});
+
 
 
 
@@ -23,23 +27,34 @@ Route::get('/', [
 # User Routes   
 */
 
-Route::get('user', [
-    'uses' => 'UserController@index',
-    'as'   => 'user',
-    //'middleware'=> ['auth']
-]);
+Route::group(['prefix' => 'user/'], function () {
 
-Route::get('user/edit', [
-    'uses' => 'UserController@edit',
-    'as'   => 'user/user',
-    //'middleware'=> ['auth']
-]);
+    Route::get('/', [
+        'uses' => 'UserController@index',
+        'as'   => 'user',
+        //'middleware'=> ['auth']
+    ]);
 
-Route::post('user/update', [
-    'uses'      => 'UserController@update',
-    'as'        => 'user.update',
-    //'middleware'=> ['auth']
-]);
+    Route::get('edit', [
+        'uses' => 'UserController@edit',
+        'as'   => 'user/user',
+        //'middleware'=> ['auth']
+    ]);
+
+    Route::post('update', [
+        'uses'      => 'UserController@update',
+        'as'        => 'user.update',
+        //'middleware'=> ['auth']
+    ]);
+
+    Route::get('videos', [
+        'uses' => 'VideoController@user',
+        'as'   => 'view'
+    ]);
+
+
+});
+
 
 
 Route::group(['prefix' => 'auth/'], function () {
@@ -96,3 +111,6 @@ Route::group(['prefix' => 'video/'], function () {
 });
 
 
+
+
+Route::get('/login/{provider}', 'OauthController@getSocialLogin');

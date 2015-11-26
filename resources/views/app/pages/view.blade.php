@@ -11,15 +11,15 @@
         <div class="top_grid">
             <br><br><br><br>
 
-            @if( sizeof($categorys) == 0)
+            @if( sizeof($categories) == 0)
                 <center>
                     <h1>You are yet to contributed to ACADA</h1>
-                    <a href="/create"><p>CLick here to post a video</p></a>
+                    <a href="/video/create"><p>CLick here to post a video</p></a>
                 </center>
                 <br>
             @endif
 
-            @foreach( $categorys as $video )
+            @foreach( $categories as $video )
             
             <div class="col-md-3 margin-1" >
                 <div class="grid1">
@@ -32,7 +32,7 @@
                     </div> 
 
                     <div class="inner_wrap">
-                        <a href="/video/{{$video->category}}/{{$video->id}}"> 
+                        <a href="/video/{{$video->categories}}/{{$video->id}}"> 
                             <h3>{{$video->title}}</h3>    
                         </a>
                     </div>
