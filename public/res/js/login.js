@@ -63,7 +63,3 @@ $(function() {
 });
 
 
-
-$('#submit').click(function  () {
-    alert('frjdhfvdfh')
-})
