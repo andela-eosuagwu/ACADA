@@ -14,13 +14,13 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user =  User::find(1)->get();
+        $user = User::find(Auth::user()->id)->get();
         return view('app.pages.user', compact('user'));
     }
 
     public function edit()
     {
-        $user =  User::where('id', 1)->get();
+        $user = User::where('id', Auth::user()->id)->get();
         return view('app.pages.edit_user', compact('user'));
         
     }
@@ -35,8 +35,7 @@ class UserController extends Controller
             $avater_url = $this->getImageUrl($request['avatar']);
             $user->avatar = $avater_url;
         }
-
-        //
+        
         $user->occupation   = $request['occupation'];
         $user->username     = $request['username'];
         $user->save();
