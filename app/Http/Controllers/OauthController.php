@@ -54,11 +54,11 @@ class OauthController extends Controller
             return $authUser;
         }
 
-        $authUser->username = ($user->name) ? $user->name : $user->nickname;
-        $authUser->email = ($user->email)? $user->email: "";
-        $authUser->password = bcrypt($user->id);
-        $authUser->oauth = $user->id;
-        $authUser->avatar = $user->avatar;
+        $authUser->username     = ($user->name) ? $user->name : $user->nickname;
+        $authUser->email        = ($user->email)? $user->email: "";
+        $authUser->password     = bcrypt($user->id);
+        $authUser->oauth        = $user->id;
+        $authUser->avatar       = $user->avatar;
 
         return $authUser;
     }
