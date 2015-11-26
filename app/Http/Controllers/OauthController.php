@@ -58,7 +58,7 @@ class OauthController extends Controller
         $authUser->email = ($user->email)? $user->email: "";
         $authUser->password = bcrypt($user->id);
         $authUser->oauth = $user->id;
-        $authUser->avater = $user->avatar;
+        $authUser->avatar = $user->avatar;
 
         return $authUser;
     }
