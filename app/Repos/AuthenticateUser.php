@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repos;
+namespace ACADA\Repos;
 
 use Illuminate\Contracts\Auth\Guard;
 use Laravel\Socialite\Contracts\Factory as Socialite;

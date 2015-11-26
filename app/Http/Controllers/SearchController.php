@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace ACADA\Http\Controllers;
 
-use App\Video;
-use App\Http\Requests;
+use ACADA\Video;
+use ACADA\Http\Requests;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+use ACADA\Http\Controllers\Controller;
 
 class SearchController extends Controller
 {

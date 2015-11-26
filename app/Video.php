@@ -1,8 +1,8 @@
 <?php
 
-namespace App;
+namespace ACADA;
 
-use App\User;
+use ACADA\User;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,6 +13,6 @@ class Video extends Model
 
 	public function user ()
 	{
-		return $this->belongsTo('App\User');
+		return $this->belongsTo('ACADA\User');
 	}
 }

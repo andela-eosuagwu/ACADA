@@ -141,10 +141,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        ACADA\Providers\AppServiceProvider::class,
+        ACADA\Providers\AuthServiceProvider::class,
+        ACADA\Providers\EventServiceProvider::class,
+        ACADA\Providers\RouteServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
 
 

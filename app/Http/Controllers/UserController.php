@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace ACADA\Http\Controllers;
 
-use App\User;
+use ACADA\User;
 use Cloudder;
-use App\Http\Requests;
+use ACADA\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Controller;
+use ACADA\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Input as Input;
 
 class UserController extends Controller

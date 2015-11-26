@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(App\Video::class, function (Faker\Generator $faker) {
+$factory->define(ACADA\Video::class, function (Faker\Generator $faker) {
     return [
         'src'            => "https://www.youtube.com/embed/pfp0x0NQf-E",
         'title'          => $faker->email,
@@ -19,7 +19,7 @@ $factory->define(App\Video::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\User::class, function (Faker\Generator $faker) {
+$factory->define(ACADA\User::class, function (Faker\Generator $faker) {
     return [
         'username'       => $faker->name,
         'email'          => $faker->email,

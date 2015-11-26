@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace ACADA\Http\Controllers\Auth;
 
 use Auth;
-use App\User;
+use ACADA\User;
 use Validator;
 use Illuminate\Http\Request;
-use App\Http\Checker\Checker;
-use App\Http\Controllers\Controller;
+use ACADA\Http\Checker\Checker;
+use ACADA\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
