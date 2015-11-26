@@ -20,7 +20,7 @@
                 <input type="text" name="src" class="text" placeholder = "Video Link"  style="margin-left:20px">
                 <div class="clearfix"></div>
             </div>
-            @if( ! Auth::check() )  
+            @if(  Auth::check() )  
             <div class="form-submit1">
                <input name="submit" type="submit" id="submit" value="Create">
             </div>

@@ -95,7 +95,8 @@ Route::group(['prefix' => 'video/'], function () {
 
     Route::get('create', [
         'uses' => 'VideoController@create',
-        'as'   => 'create'
+        'as'   => 'create',
+         'middleware'=> ['auth']
     ]);
 
     Route::post('create', [
