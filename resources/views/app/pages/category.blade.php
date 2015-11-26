@@ -11,28 +11,28 @@
         <div class="top_grid">
             <br><br><br><br>
 
-            @if( sizeof($categorys) == 0)
+            @if( sizeof($categories) == 0)
                 <center>
-                    <h1>Category Not found</h1>
+                    <h1>Result Not found</h1>
                     <a href="/"><p>CLick here to start here over</p></a>
                 </center>
                 <br>
             @endif
 
-            @foreach( $categorys as $video )
+            @foreach( $categories as $video )
             
             <div class="col-md-3 margin-1" >
                 <div class="grid1">
                     <div class="view view-first">
                         <div class="index_img1">
                             <center>
-                                <img src="../../res/images/{{$video->category}}.png" class="img-responsive" alt="">
+                                <img src="../../res/images/{{$video->categories}}.png" class="img-responsive" alt="">
                             </center>
                         </div>
                     </div> 
 
                     <div class="inner_wrap">
-                        <a href="/video/{{$video->category}}/{{$video->id}}"> 
+                        <a href="/video/{{$video->categories}}/{{$video->title}}"> 
                             <h3>{{$video->title}}</h3>    
                         </a>
                     </div>

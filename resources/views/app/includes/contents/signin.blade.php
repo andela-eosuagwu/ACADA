@@ -8,16 +8,16 @@
     <div class="content_middle_bo">
         <div style="margin-left:335px; margin-top:100px;" class="col col-sm-5">
 
-            <form method="post" action="/signin">
+            <form method="post" action="/auth/signin">
                 {!! csrf_field() !!}
                 <div class="form-group">
                     <label class="control-label">Username</label>
-                    <input class="form-control" type="text" name="username" value="{{ old('email') }}">
+                    <input required="required" class="form-control" type="text" name="username" value="{{ old('email') }}">
                 </div>
 
                 <div class="form-group">
                     <label class="control-label">Password</label>
-                    <input class="form-control" type="password" name="password" id="password">
+                    <input required="required" class="form-control" type="password" name="password" id="password">
                 </div>
 
                 <div class="form-group">

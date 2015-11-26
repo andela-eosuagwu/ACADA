@@ -10,25 +10,25 @@ use App\Http\Controllers\Controller;
 
 class UserController extends Controller
 {
-    public function index($id)
+    public function index()
     {
-        $user =  User::get()->find($id);
+        $user =  User::find(1)->get();
         return view('app.pages.user', compact('user'));
     }
 
-    public function edit($id)
+    public function edit()
     {
-        $user =  User::get()->find($id);
+        $user =  User::where('id', 1)->get();
         return view('app.pages.edit_user', compact('user'));
+        
     }
     
     public function update(Request $request)
     {
-        $id = Auth::user()->id;
+        //$id = Auth::user()->id;
+        $id = 1;
         User::where('id', $id)->update(['avater'      => $request['avater']]);
-        User::where('id', $id)->update(['username'    => $request['username']]);
-        User::where('id', $id)->update(['occupation'  => $request['occupation']]);
-        return redirect('user/$id');
+        return redirect("user");
     }  
 
 }

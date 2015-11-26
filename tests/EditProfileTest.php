@@ -7,11 +7,6 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class EditProfileTest extends TestCase
 {
-    public function testExample()
-    {
-        $this->assertTrue(true);
-    }
-
 	public function testEditProfilePageLoadsCorrectly()
 	{
         User::where('id', 1)->update(['avater'      => 'avater']);

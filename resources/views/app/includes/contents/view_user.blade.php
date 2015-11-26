@@ -1,7 +1,7 @@
 <div class="container">
     <div class="content_middle_box centered" >
         
-            <div class="row" style="text-align:center" >
+            <div class="row" style=" margin-left:398px; width:1260px;  text-align:center" >
                 <div class="col-xs-6 col-md-3">
                     @if( is_null(Auth::user()->avater) || Auth::user()->avater == '')
                         <a href="#" class="thumbnail">

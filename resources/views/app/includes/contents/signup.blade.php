@@ -4,25 +4,35 @@
     </script>
 @endif
 
+@if (count($errors) > 0)
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <div class="container">
     <div class="content_middle_bo">
         <div style="margin-left:335px; margin-top:100px;" class="col col-sm-5">
 
-            <form method="post" action="/signup">
+            <form method="post" action="/auth/signup">
                 {!! csrf_field() !!}
                 <div class="form-group">
                     <label class="control-label">Username</label>
-                    <input class="form-control" type="text" name="username" value="{{ old('email') }}">
+                    <input required="required" class="form-control" type="text" name="username" value="{{ old('email') }}">
                 </div>
 
                 <div class="form-group">
                     <label class="control-label">E-mail</label>
-                    <input class="form-control" type="email" name="email" value="{{ old('email') }}">
+                    <input required="required" class="form-control" type="email" name="email" value="{{ old('email') }}">
                 </div>
 
                 <div class="form-group">
                     <label class="control-label">Password</label>
-                    <input class="form-control" type="password" name="password" id="password">
+                    <input required="required"  class="form-control" type="password" name="password" id="password">
                 </div>
 
                 <div class="form-group">

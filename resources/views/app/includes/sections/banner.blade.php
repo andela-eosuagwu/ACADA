@@ -13,7 +13,7 @@
 
         </div>  
         <form action="search" method="get">
-            <input type="text" name="category">
+            <input type="text" name="title">
             <div class="contact_btn">
                 <label class="btn1 btn-2 btn-2g">
                     <input type="submit" id="submit">

@@ -37,8 +37,8 @@ class VideoController extends Controller
         Video::create([
             'src'       => $data['src'],
             'title'     => $data['title'],
-            'user_id'   => Auth::user()->id,
-            'category'  => $data['category'],
+            'user_id'   => 1,
+            'categories'  => $data['categories'],
         ]);
     }
 
@@ -50,15 +50,9 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        $link       =  $request['src'];
-        $title      =  $request['title'];
-        $category   =  $request['category'];
-
-        $this->save($request->all());
-        
+        $this->save($request->all());        
         $response = "success";
         return view('app.pages.create', compact('response'));
-
     }
 
     /**
@@ -73,31 +67,11 @@ class VideoController extends Controller
         return view('app.pages.category', compact('categorys'));
     }
 
-    public function show($category, $id)
+    public function show($category, $title)
     {
-        $video      = Video::all()->where('category', $category)->find($id);
-        $feature    = Video::all()->where('category', $category)->random()->take(4);
-        
-        $data = 
-        [
-            "video"     => $video,
-            "feature"   => $feature
-        ];
-
-        return view('app.pages.play_video', compact('data'));
+        $video  = Video::get()->where('title', $title);
+        return view('app.pages.play_video', compact('video'));
     }
 
-
-    public function user()
-    {
-        $categorys =  User::all();
-
-        foreach ($categorys as $value) 
-        {
-            $categorys = $value->video;
-        }
-
-        return view('app.pages.view', compact('categorys'));
-    }
 
 }

@@ -28,7 +28,7 @@
             <ul class="nav" id="nav">
                 <li class="active"><a href="/">Home</a></li>
                 <li><a href="/contact">Contact</a></li>
-                <li><a href="/create">Add Video</a></li>
+                <li><a href="/video/create">Add Video</a></li>
                 <div class="clearfix"></div>
             </ul>
         </div>
@@ -39,8 +39,8 @@
         <div id="loginContainer">
             
             @if( ! Auth::check() )
-            <a href="/login" id=""><img src="{{ asset('res/images/login.png') }}"><span>Login</span></a>
-            <a href="/register" id=""><img src="{{ asset('res/images/login.png') }}"><span>Register</span></a>     
+            <a href="/auth/login" id=""><img src="{{ asset('res/images/login.png') }}"><span>Login</span></a>
+            <a href="/auth/register" id=""><img src="{{ asset('res/images/login.png') }}"><span>Register</span></a>     
             @endif
             
 
@@ -52,7 +52,7 @@
                     <a href="/user/{{Auth::user()->id}}" id=""><img style = "width:50px; margin-top:-10px;"src="{{ Auth::user()->avater }}"><span>{{Auth::user()->username}}</span></a>     
                 @endif
 
-                <a style ="margin-left:40px;" href="/logout" id=""><span>logout</span></a>     
+                <a style ="margin-left:40px;" href="/auth/logout" id=""><span>logout</span></a>     
             @endif
         </div>
         <div class="clearfix"></div>

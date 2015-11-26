@@ -16,8 +16,8 @@ class SearchController extends Controller
      */
     public function index(Request $request)
     {
-        $categorys = Video::get()->where('category', $request['category']);
-        return view('app.pages.category', compact('categorys'));
+        $categories = Video::where('title', $request['title'])->get();
+        return view('app.pages.category', compact('categories'));
     }
 
     /**

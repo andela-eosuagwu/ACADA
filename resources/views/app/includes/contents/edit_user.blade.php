@@ -8,7 +8,7 @@
                 <div class="form-group has-success has-feedback">
                     <label class="control-label col-sm-3" for="inputSuccess3">Username</label>
                     <div class="col-sm-9">
-                        <input type="text" value = "{{Auth::user()->username}}" name="username" class="form-control" id="inputSuccess3" aria-describedby="inputSuccess3Status">
+                        <input type="text" value = "Auth::user()->username" name="username" class="form-control" id="inputSuccess3" aria-describedby="inputSuccess3Status">
                         <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
                         <span id="inputSuccess3Status" class="sr-only">(success)</span>
                     </div>
@@ -17,7 +17,7 @@
                 <div class="form-group has-success has-feedback">
                     <label class="control-label col-sm-3" for="inputSuccess3">Avater</label>
                     <div class="col-sm-9">
-                        <input type="text" name="avater" value = "{{Auth::user()->avater}}" class="form-control" id="inputSuccess3" aria-describedby="inputSuccess3Status">
+                        <input type="text" name="avater" value = "Auth::user()->avatar" class="form-control" id="inputSuccess3" aria-describedby="inputSuccess3Status">
                         <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
                         <span id="inputSuccess3Status" class="sr-only">(success)</span>
                     </div>
@@ -26,7 +26,7 @@
                 <div class="form-group has-success has-feedback">
                     <label class="control-label col-sm-3" for="inputSuccess3">Occupation</label>
                     <div class="col-sm-9">
-                        <input type="text" name="occupation" value = "{{Auth::user()->occupation}}" class="form-control" id="inputSuccess3" aria-describedby="inputSuccess3Status">
+                        <input type="text" name="occupation" value = "Auth::user()->occupation" class="form-control" id="inputSuccess3" aria-describedby="inputSuccess3Status">
                         <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
                         <span id="inputSuccess3Status" class="sr-only">(success)</span>
                     </div>

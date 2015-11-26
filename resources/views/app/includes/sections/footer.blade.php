@@ -20,7 +20,7 @@
                 </ul>
             </div>
             <div class="footer-grid">
-                <h4>Categorys</h4>
+                <h4>Categories</h4>
                 <ul class="list1">
                     <li><a href="/video/php">php</a></li>
                     <li><a href="/video/ruby">ruby</a></li>

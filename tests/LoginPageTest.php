@@ -8,17 +8,12 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class LoginPageTest extends TestCase
 {
 
-    public function testExample()
-    {
-        $this->assertTrue(true);
-    }
-
     protected function createUser ()
     {
         $user = App\User::create([
-            'username' => 'test',
-            'password' => 'test',
-            'email' => 'test@test.com'
+            'username'  => 'test',
+            'password'  => 'test',
+            'email'     => 'test@test.com'
         ]);
         return $user;
     }

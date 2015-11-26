@@ -16,7 +16,33 @@ Route::get('/', [
     'as'   => '/'
 ]);
 
-Route::group(['prefix' => '/'], function () {
+
+
+
+/*
+# User Routes   
+*/
+
+Route::get('user', [
+    'uses' => 'UserController@index',
+    'as'   => 'user',
+    //'middleware'=> ['auth']
+]);
+
+Route::get('user/edit', [
+    'uses' => 'UserController@edit',
+    'as'   => 'user/user',
+    //'middleware'=> ['auth']
+]);
+
+Route::post('user/update', [
+    'uses'      => 'UserController@update',
+    'as'        => 'user.update',
+    //'middleware'=> ['auth']
+]);
+
+
+Route::group(['prefix' => 'auth/'], function () {
 
     Route::get('login', function () {
         return view('app.pages.signin');
@@ -44,61 +70,29 @@ Route::group(['prefix' => '/'], function () {
 
 });
 
-Route::get('/contact', function () {
-    return view('app.pages.contact');
-});
-
 
 Route::get('search', [
     'uses' => 'SearchController@index',
     'as'   => 'search'
 ]);
 
-Route::get('create', [
-    'uses' => 'VideoController@create',
-    'as'   => 'create'
-]);
+Route::group(['prefix' => 'video/'], function () {
 
-Route::post('createpost', [
-    'uses' => 'VideoController@store',
-    'as'   => 'createpost'
-]);
+    Route::get('create', [
+        'uses' => 'VideoController@create',
+        'as'   => 'create'
+    ]);
 
-Route::get('video', [
-    'uses' => 'VideoController@index',
-    'as'   => 'video'
-]);
+    Route::post('create', [
+        'uses' => 'VideoController@store',
+        'as'   => 'create'
+    ]);
 
-Route::get('video/{category}', [
-    'uses' => 'VideoController@category',
-    'as'   => 'video'
-]);
+    Route::get('/{none}/{title}', [
+        'uses' => 'VideoController@show',
+        'as'   => 'video'
+    ]);
 
-Route::get('video/{category}/{id}', [
-    'uses' => 'VideoController@show',
-    'as'   => 'video'
-]);
-
-Route::get('view', [
-    'uses' => 'VideoController@user',
-    'as'   => 'view'
-]);
+});
 
 
-Route::get('user/{id}', [
-    'uses' => 'UserController@index',
-    'as'   => 'user'
-]);
-
-Route::get('user/edit/{id}', [
-    'uses' => 'UserController@edit',
-    'as'   => 'user'
-]);
-
-Route::post('user/update', [
-    'uses' => 'UserController@update',
-    'as'   => 'user.update',
-    'middleware'=> ['auth']
-]);
-
-Route::get('/login/{provider}', 'OauthController@getSocialLogin');

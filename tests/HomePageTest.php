@@ -13,7 +13,7 @@ class HomePageTest extends TestCase
 		$this->assertResponseOk();
 	}
 
-	public function testHomePageHasLogo()
+	public function testHomeHasSearchTitle()
 	{
 		$this->visit('/')
 		  ->see('What are you looking for?');
