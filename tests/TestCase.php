@@ -9,7 +9,7 @@ class TestCase extends Illuminate\Foundation\Testing\TestCase
      *
      * @var string
      */
-    protected $baseUrl = 'http://localhost:8000/';
+    protected $baseUrl = 'http://localhost:8000';
 
 	public function setUp()
 	{

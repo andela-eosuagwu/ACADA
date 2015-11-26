@@ -8,16 +8,27 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 class EditProfileTest extends TestCase
 {
 
-
 	public function testEditProfilePageLoadsCorrectly()
 	{
-        $update = User::where('id', 1)->update(
-        	['avater' 		=> 'avater'],
-        	['username'     => 'username'],
-        	['occupation'   => 'occupation']
-        );
-		$this->call('GET', 'user/edit');
+		$user = factory(User::class)->create();
+		$this->actingAs($user)
+		  ->withSession(['name' => 'johndoe'])
+		  ->visit('/user/edit');
+		
+		$this->call('GET', '/user/edit');
 		$this->assertResponseOk();
 	}
 
+	public function testUserUpdateWorks()
+	{
+		$user = factory(User::class)->create();
+		$this->actingAs($user)
+		  ->withSession(['name' => 'johndoe']);
+
+		$this->visit('user/edit')
+			->type('username', 'username')
+			->type('occupation', 'occupation')
+			->press('update')
+			->seePageIs("/user");
+	}
 }

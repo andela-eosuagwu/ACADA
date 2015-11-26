@@ -32,8 +32,8 @@
                     </div>
                 </div>
                 
-                <button type="submit" class="btn btn-primary ">Update</button>
-                <a href="/user">Profile</a>
+                <button type="submit" name="update" class="btn btn-primary ">Update</button>
+                <a href="{{ url('/user') }}">Profile</a>
             </form> 
         </div>    
         

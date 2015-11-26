@@ -19,6 +19,21 @@ $factory->define(App\Video::class, function (Faker\Generator $faker) {
     ];
 });
 
+$factory->define(App\User::class, function (Faker\Generator $faker) {
+    return [
+        'username'       => $faker->name,
+        'email'          => $faker->email,
+        'password'       => $faker->password,
+        'avatar'       => $faker->imageUrl,
+        'avatar'       	=> $faker->imageUrl,
+        'oauth'       	=> 1,
+        'occupation'    => $faker->name
+    ];
+});
+
+
+
+
 // $factory->define(Suyabay\Channel::class, function (Faker\Generator $faker) {
 //     return [
 //         'channel_name'        => $faker->name,

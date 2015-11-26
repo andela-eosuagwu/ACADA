@@ -28,9 +28,22 @@ class UserController extends Controller
     public function update(Request $request)
     {
         //$id = Auth::user()->id;
+
+
         $id = 1;
-        $avater_url = $this->getImageUrl($request['avatar']);
-        User::where('id', $id)->update(['username' => $request['username'], 'avatar' => $avater_url, 'occupation' => $request['occupation']]);
+        $user = User::find($id);
+        
+        if (  $request['avatar']) 
+        {
+            $avater_url = $this->getImageUrl($request['avatar']);
+            $user->avatar = $avater_url;
+        }
+
+        //
+        $user->occupation   = $request['occupation'];
+        $user->username     = $request['username'];
+        $user->save();
+        //User::where('id', $id)->update(['username' => $request['username'], 'avatar' => $avater_url, 'occupation' => $request['occupation']]);
         return redirect("user");        
     }  
 
