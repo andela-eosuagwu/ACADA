@@ -12,10 +12,10 @@
                             <img src="{{ Auth::user()->avatar}}" alt="...">
                         </a>
                     @endif
-                    <h3>Name: {{Auth::user()->username}}</h3>
-                    <h4>Occupation: {{Auth::user()->occupation}}</h4>
+                    <h3>{{Auth::user()->username}}</h3>
+                    <h4>{{Auth::user()->occupation}}</h4>
 
-                    <p>Email: {{Auth::user()->email}}</p>
+                    <p>{{Auth::user()->email}}</p>
                     <br>
                     <p>
                         <a href="/user/edit" class="btn  btn-primary" role="button">Edit Profile</a> 
