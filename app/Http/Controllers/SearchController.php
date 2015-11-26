@@ -40,6 +40,7 @@ class SearchController extends Controller
      */
     public function show($category, $id)
     {
+        //$video = Video::all()->where('category', 'php')->find($id);
         $video      = Video::all()->where('category', 'php')->find($id);
         $feature    = Video::all()->where('category', 'php')->take(4);
         

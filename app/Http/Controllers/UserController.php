@@ -39,7 +39,7 @@ class UserController extends Controller
         $user->occupation   = $request['occupation'];
         $user->username     = $request['username'];
         $user->save();
-        
+        //User::where('id', $id)->update(['username' => $request['username'], 'avatar' => $avater_url, 'occupation' => $request['occupation']]);
         return redirect("user");        
     }  
 

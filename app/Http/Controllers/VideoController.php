@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace ACADA\Http\Controllers;
 
-use App\User;
-use App\Video;
-use App\Http\Requests;
+use ACADA\User;
+use ACADA\Video;
+use ACADA\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Http\Controllers\Controller;
+use ACADA\Http\Controllers\Controller;
 
 class VideoController extends Controller
 {
