@@ -10,7 +10,6 @@
             <div class="to">
                 <input type="text" name="title" class="text" placeholder = "Video title">
                 
-                <!-- <input type="text" name="category" class="text" placeholder = "Video category" style="margin-left:20px"> -->
                 <select name="categories" class="category_option">
                 	<option value="none" >Select Category</option>
                 	<option value="php" >PHP</option>
