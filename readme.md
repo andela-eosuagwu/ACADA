@@ -3,7 +3,7 @@
 
 
 # ACADA
-ACADA is an open source-like community built on PHP that allows different developers share links of helpful videos.
+ACADA is an open source community built with PHP using Laravel, it allow developers share links of helpful videos.
 
 ## Contributing
 
