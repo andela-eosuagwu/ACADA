@@ -27,11 +27,8 @@ class UserController extends Controller
 
     public function update(Request $request)
     {
-        //$id = Auth::user()->id;
-
-
-        $id = 1;
-        $user = User::find($id);
+        $id     = Auth::user()->id;
+        $user   = User::find($id);
         
         if (  $request['avatar']) 
         {
