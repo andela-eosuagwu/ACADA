@@ -7,13 +7,13 @@
                     <div class="view view-first">
                         <div class="index_img1">
                             <center>
-                                <img style ="width:200px;" src="res/images/{{$video->category}}.png" class="img-responsive" alt="">
+                                <img style ="width:200px;" src="res/images/{{$video->categories}}.png" class="img-responsive" alt="">
                             </center>
                         </div>
                     </div> 
 
                     <div class="inner_wrap">
-                        <a href="video/{{$video->category}}/{{$video->id}}"> 
+                        <a href="video/{{$video->categories}}/{{$video->id}}"> 
                             <h3>{{$video->title}}</h3>    
                         </a>
                     </div>
