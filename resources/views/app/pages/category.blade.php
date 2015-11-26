@@ -13,8 +13,8 @@
 
             @if( sizeof($categories) == 0)
                 <center>
-                    <h1>Result Not found</h1>
-                    <a href="/"><p>CLick here to start here over</p></a>
+                    <h1>Result not found</h1>
+                    <a href="/"><p>Click here to start here over</p></a>
                 </center>
                 <br>
             @endif
