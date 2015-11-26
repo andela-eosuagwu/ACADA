@@ -110,7 +110,4 @@ Route::group(['prefix' => 'video/'], function () {
 
 });
 
-
-
-
 Route::get('/login/{provider}', 'OauthController@getSocialLogin');
