@@ -45,11 +45,11 @@
             
 
             @if( Auth::check() )
-                @if( is_null(Auth::user()->avater) || Auth::user()->avater == '' )
+                @if( is_null(Auth::user()->avatar) || Auth::user()->avatar == '' )
                     <a href="/user" id=""><img style = "width:40px; margin-top:-14px;" src="{{ asset('res/images/profile.png') }}"><span>{{Auth::user()->username}}</span></a>     
                 @endif
-                @if( ! is_null(Auth::user()->avater) || ! Auth::user()->avater == '' )
-                    <a href="/user" id=""><img style = "width:50px; margin-top:-10px;"src="{{ Auth::user()->avater }}"><span>{{Auth::user()->username}}</span></a>     
+                @if( ! is_null(Auth::user()->avatar) || ! Auth::user()->avatar == '' )
+                    <a href="/user" id=""><img style = "width:50px; margin-top:-10px;"src="{{ Auth::user()->avatar }}"><span>{{Auth::user()->username}}</span></a>     
                 @endif
 
                 <a style ="margin-left:40px;" href="/auth/logout" id=""><span>logout</span></a>     
