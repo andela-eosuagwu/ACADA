@@ -7,12 +7,16 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class EditProfileTest extends TestCase
 {
+
+
 	public function testEditProfilePageLoadsCorrectly()
 	{
-        User::where('id', 1)->update(['avater'      => 'avater']);
-        User::where('id', 1)->update(['username'    => "username"]);
-        User::where('id', 1)->update(['occupation'  => "occupation"]);
-		return $this->call('GET', 'user/edit/1');
+        $update = User::where('id', 1)->update(
+        	['avater' 		=> 'avater'],
+        	['username'     => 'username'],
+        	['occupation'   => 'occupation']
+        );
+		$this->call('GET', 'user/edit');
 		$this->assertResponseOk();
 	}
 

@@ -18,4 +18,16 @@ class HomePageTest extends TestCase
 		$this->visit('/')
 		  ->see('What are you looking for?');
 	}
+
+	public function testHomeHasLoginLink()
+	{
+		$this->visit('/')
+		  ->see('/auth/login');
+	}
+
+	public function testHomeHasRegisterLink()
+	{
+		$this->visit('/')
+		  ->see('/auth/register');
+	}
 }
