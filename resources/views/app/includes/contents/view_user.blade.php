@@ -3,7 +3,7 @@
         
             <div class="row" style=" margin-left:398px; width:1260px;  text-align:center" >
                 <div class="col-xs-6 col-md-3">
-                    @if( is_null(Auth::user()->avater) || Auth::user()->avater == '')
+                    @if( is_null(Auth::user()->avatar) || Auth::user()->avatar == '')
                         <a href="#" class="thumbnail">
                             <img src="{{ asset('res/images/profile.png') }}" alt="...">
                         </a>
