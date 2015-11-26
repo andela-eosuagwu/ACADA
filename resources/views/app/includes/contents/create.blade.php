@@ -8,19 +8,19 @@
         <h2>Post Video</h2>
         <form method="post" action="/video/create">
             <div class="to">
-                <input type="text" name="title" class="text" placeholder = "Video title">
+                <input type="text" required="required" name="title" class="text" placeholder = "Video title">
                 
-                <select name="categories" class="category_option">
-                	<option value="none" >Select Category</option>
+                <select required name="categories" class="category_option" >
+                	<option value="" >Select Category</option>
                 	<option value="php" >PHP</option>
                 	<option value="java">JAVA</option>
                 	<option value="nodejs">NODEJS</option>
                 </select>
 
-                <input type="text" name="src" class="text" placeholder = "Video Link"  style="margin-left:20px">
+                <input type="text" required="required" name="src" class="text" placeholder = "Video Link"  style="margin-left:20px">
                 <div class="clearfix"></div>
             </div>
-            @if(  Auth::check() )  
+            @if(   Auth::check() )  
             <div class="form-submit1">
                <input name="submit" type="submit" id="submit" value="Create">
             </div>
