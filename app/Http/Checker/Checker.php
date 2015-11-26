@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Checker;
+namespace ACADA\Http\Checker;
 
-use App\User;
+use ACADA\User;
 
 class Checker
 {

@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace ACADA\Http\Controllers;
 
 use Auth;
-use App\User;
-use App\Http\Requests;
+use ACADA\User;
+use ACADA\Http\Requests;
 use Illuminate\Http\Request;
-use App\Http\Checker\Checker;
-use App\Repos\AuthenticateUser;
-use App\Http\Controllers\Controller;
+use ACADA\Http\Checker\Checker;
+use ACADA\Repos\AuthenticateUser;
+use ACADA\Http\Controllers\Controller;
 use Illuminate\Contracts\Auth\Guard;
 
 class OauthController extends Controller

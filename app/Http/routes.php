@@ -103,7 +103,7 @@ Route::group(['prefix' => 'video/'], function () {
         'as'   => 'create'
     ]);
 
-    Route::get('/{none}/{title}', [
+    Route::get('/{category}/{title}', [
         'uses' => 'VideoController@show',
         'as'   => 'video'
     ]);

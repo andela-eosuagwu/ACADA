@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace ACADA;
 
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
@@ -39,6 +39,6 @@ class User extends Model implements AuthenticatableContract,
 
     public function video()
     {
-        return $this->hasMany('App\Video');
+        return $this->hasMany('ACADA\Video');
     }
 }

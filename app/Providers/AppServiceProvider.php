@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace ACADA\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
