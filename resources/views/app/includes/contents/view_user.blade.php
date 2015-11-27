@@ -13,17 +13,30 @@
                         </a>
                     @endif
                     <form class="form-horizontal">
+                    
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Username </label>
                         <div class="col-sm-10">
                             <p class="form-control-static">{{Auth::user()->username}}</p>
                         </div>
                     </div>
+                    
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Email </label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">{{Auth::user()->email}}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">Occupation </label>
+                        <div class="col-sm-10">
+                            <p class="form-control-static">{{Auth::user()->occupation}}</p>
+                        </div>
+                    </div>
+                    
                     </form>
-
-                    <h4>{{Auth::user()->occupation}}</h4>
-
-                    <p>{{Auth::user()->email}}</p>
                     <br>
                     <p>
                         <a href="/user/edit" class="btn  btn-primary" role="button">Edit Profile</a> 
