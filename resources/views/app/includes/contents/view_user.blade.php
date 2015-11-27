@@ -12,12 +12,14 @@
                             <img src="{{ Auth::user()->avatar}}" alt="...">
                         </a>
                     @endif
+                    <form class="form-horizontal">
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">Username</label>
+                        <label class="col-sm-2 control-label">Username </label>
                         <div class="col-sm-10">
                             <p class="form-control-static">{{Auth::user()->username}}</p>
                         </div>
                     </div>
+                    </form>
 
                     <h4>{{Auth::user()->occupation}}</h4>
 
