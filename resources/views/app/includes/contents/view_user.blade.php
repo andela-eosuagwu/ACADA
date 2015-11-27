@@ -17,22 +17,22 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Username </label>
                         <div class="col-sm-10">
-                            <p class="form-control-static">Auth::user()->username</p>
+                            <p class="form-control-static">{{Auth::user()->username}}</p>
                         </div>
                     </div>
                     
                     
                     <div class="form-group">
-                        <label style="width:100px;" class="col-sm-2 control-label">Email </label>
+                        <label class="col-sm-2 control-label">Email </label>
                         <div class="col-sm-10">
-                            <p class="form-control-static">Auth::user()->email</p>
+                            <p class="form-control-static">{{Auth::user()->email}}</p>
                         </div>
                     </div>
                     
                     <div class="form-group">
                         <label class="col-sm-2 control-label">Occupation </label>
                         <div class="col-sm-10">
-                            <p class="form-control-static">Auth::user()->occupation</p>
+                            <p class="form-control-static">{{Auth::user()->occupation}}</p>
                         </div>
                     </div>
                     
