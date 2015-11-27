@@ -1,6 +1,6 @@
 <?php
 
-use App\User as User;
+use ACADA\User as User;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -21,7 +21,7 @@ class RegisterPageTest extends TestCase
     public function testForCreatingOneUser()
     {
         $this->createUser();
-        $user = App\User::all();
+        $user = ACADA\User::all();
         $this->assertEquals(1, sizeof($user));
     }
 
