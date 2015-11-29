@@ -1,4 +1,6 @@
-<div class="container">
+ @include('app.includes.sections.banner')
+
+ <div class="container">
     <div class="content_middle_box centered" >
         
             <div class="row" style=" margin-left:398px; width:1260px;  text-align:center" >
@@ -12,10 +14,21 @@
                             <img src="{{ Auth::user()->avatar}}" alt="...">
                         </a>
                     @endif
-                    <h3>{{Auth::user()->username}}</h3>
-                    <h4>{{Auth::user()->occupation}}</h4>
-
-                    <p>{{Auth::user()->email}}</p>
+                    <table class="table">
+                        <tr>
+                            <td>Username</td>
+                            <td>{{Auth::user()->username}}</td>
+                        </tr>
+                        <tr>
+                            <td>Occupation</td>
+                            <td>{{Auth::user()->occupation}}</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>{{Auth::user()->email}}</td>
+                        </tr>
+                    </table>
+                    
                     <br>
                     <p>
                         <a href="/user/edit" class="btn  btn-primary" role="button">Edit Profile</a> 

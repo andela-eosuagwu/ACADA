@@ -10,7 +10,7 @@
 	| include banner section to home page
 	| @location includes/sections/banner.blade.php
 	 -->
-    @include('app.includes.sections.banner')
+    @include('app.includes.contents.view_user')
 
 	<!-- 
 	| include main content to home page
