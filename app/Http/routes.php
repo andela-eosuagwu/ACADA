@@ -32,19 +32,19 @@ Route::group(['prefix' => 'user/'], function () {
     Route::get('/', [
         'uses' => 'UserController@index',
         'as'   => 'user',
-        //'middleware'=> ['auth']
+        'middleware'=> ['auth']
     ]);
 
     Route::get('edit', [
         'uses' => 'UserController@edit',
         'as'   => 'user/user',
-        //'middleware'=> ['auth']
+        'middleware'=> ['auth']
     ]);
 
     Route::post('update', [
         'uses'      => 'UserController@update',
         'as'        => 'user.update',
-        //'middleware'=> ['auth']
+        'middleware'=> ['auth']
     ]);
 
     Route::get('videos', [
@@ -95,22 +95,27 @@ Route::group(['prefix' => 'video/'], function () {
 
     Route::get('create', [
         'uses' => 'VideoController@create',
-        'as'   => 'create'
+        'as'   => 'create',
+         'middleware'=> ['auth']
     ]);
 
     Route::post('create', [
         'uses' => 'VideoController@store',
-        'as'   => 'create'
+        'as'   => 'create',
+        'middleware'=> ['auth']
+    ]);
+
+    Route::get('{category}', [
+        'uses' => 'VideoController@categories',
+        'as'   => 'video.category'
     ]);
 
     Route::get('/{category}/{title}', [
         'uses' => 'VideoController@show',
-        'as'   => 'video'
+        'as'   => 'video',
+        'middleware'=> ['auth']
     ]);
 
 });
-
-
-
 
 Route::get('/login/{provider}', 'OauthController@getSocialLogin');

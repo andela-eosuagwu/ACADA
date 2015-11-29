@@ -1,6 +1,6 @@
 <?php
 
-use App\User as User;
+use ACADA\User as User;
 use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;

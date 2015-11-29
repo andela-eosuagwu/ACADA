@@ -19,7 +19,7 @@
         <h1>Contact Us</h1>
         <div class="col-md-9 wow fadeInLeft" data-wow-delay="0.4s">
             <div class="map">
-                <iframe src="https://www.google.com.ng/maps/dir//2+Funso+Street/@6.5069951,3.3489223,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x103b8cf474e419c5:0xe5aacf2916d3603c!2m2!1d3.3840278!2d6.506911"> </iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d63425.856335602075!2d3.3489222599308897!3d6.506995068774295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x103b8cf474e419c5%3A0xe5aacf2916d3603c!2s2+Funso+Street!3m2!1d6.506911!2d3.3840277999999997!5e0!3m2!1sen!2sng!4v1448579354422" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
         

@@ -28,7 +28,6 @@
                             <td>{{Auth::user()->email}}</td>
                         </tr>
                     </table>
-                    
                     <br>
                     <p>
                         <a href="/user/edit" class="btn  btn-primary" role="button">Edit Profile</a> 
