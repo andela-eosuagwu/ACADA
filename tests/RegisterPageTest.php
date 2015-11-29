@@ -21,7 +21,7 @@ class RegisterPageTest extends TestCase
     public function testForCreatingOneUser()
     {
         $this->createUser();
-        $user = ACADA\User::all();
+        $user = User::all();
         $this->assertEquals(1, sizeof($user));
     }
 

@@ -1,4 +1,3 @@
- @include('app.includes.sections.banner')
 
  <div class="container">
     <div class="content_middle_box centered" >

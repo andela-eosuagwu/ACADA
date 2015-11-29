@@ -20,9 +20,6 @@ Route::get('/contact', function () {
     return view('app.pages.contact');
 });
 
-
-
-
 /*
 # User Routes   
 */
@@ -54,7 +51,6 @@ Route::group(['prefix' => 'user/'], function () {
 
 
 });
-
 
 
 Route::group(['prefix' => 'auth/'], function () {
