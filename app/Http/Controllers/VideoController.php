@@ -35,10 +35,10 @@ class VideoController extends Controller
     protected function save(array $data)
     {
         Video::create([
-            'src'       => $data['src'],
-            'title'     => $data['title'],
-            'user_id'   => 1,
-            'categories'  => $data['categories'],
+            'src'           => $data['src'],
+            'title'         => $data['title'],
+            'user_id'       => Auth::user()->id,
+            'categories'    => $data['categories'],
         ]);
     }
 
