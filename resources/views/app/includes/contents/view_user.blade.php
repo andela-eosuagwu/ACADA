@@ -27,6 +27,10 @@
                             <td>Email</td>
                             <td>{{Auth::user()->email}}</td>
                         </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                        </tr>
                     </table>
                     <br>
                     <p>
