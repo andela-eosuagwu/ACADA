@@ -33,10 +33,12 @@
                         </tr>
                     </table>
                     <br>
-                    <p>
-                        <a href="/user/edit" class="btn  btn-primary" role="button">Edit Profile</a> 
-                        <a href="/user/videos" class="btn  btn-primary" role="button">My Videos</a> 
-                    </p>
+                    <center>
+                        <p>
+                            <a href="/user/edit" class="btn  btn-primary" role="button">Edit Profile</a> 
+                            <a href="/user/videos" class="btn  btn-primary" role="button">My Videos</a> 
+                        </p>
+                    </center>
                 </div>
             </div>    
         
