@@ -10,6 +10,7 @@
 	| include main content to home page
 	| @location includes/contents/main.blade.php
 	 -->
+	 
     @include('app.includes.contents.view_user')
 
 	<!-- 
