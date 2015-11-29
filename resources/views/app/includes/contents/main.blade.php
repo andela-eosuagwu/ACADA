@@ -13,7 +13,7 @@
                     </div> 
 
                     <div class="inner_wrap">
-                        <a href="video/{{$video->categories}}/{{$video->title}}"> 
+                        <a href="video/{{$video->categories}}/{{$video->id}}"> 
                             <h3>{{$video->title}}</h3>    
                         </a>
                     </div>

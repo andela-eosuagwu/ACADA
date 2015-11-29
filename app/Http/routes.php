@@ -106,7 +106,7 @@ Route::group(['prefix' => 'video/'], function () {
         'as'   => 'video.category'
     ]);
 
-    Route::get('/{category}/{title}', [
+    Route::get('/{category}/{id}', [
         'uses' => 'VideoController@show',
         'as'   => 'video',
         'middleware'=> ['auth']
