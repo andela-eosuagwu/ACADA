@@ -24,6 +24,10 @@
                             <td>{{Auth::user()->occupation}}</td>
                         </tr>
                         <tr>
+                            <td>Occupation</td>
+                            <td>{{Auth::user()->occupation}}</td>
+                        </tr>
+                        <tr>
                             <td>Email</td>
                             <td>{{Auth::user()->email}}</td>
                         </tr>
