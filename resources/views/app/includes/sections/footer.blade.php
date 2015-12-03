@@ -15,7 +15,7 @@
             <div class="footer-grid">
                 <h4>Site Map</h4>
                 <ul class="list1">
-                    <li><a href="contact">Contact</a></li>
+                    <li><a href="/contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-grid">
