@@ -13,7 +13,7 @@
 
             @if( sizeof($categories) == 0)
                 <center>
-                    <h1>You are yet to contributed to ACADA</h1>
+                    <h1>You are yet to contribute to ACADA</h1>
                     <a href="/video/create"><p>CLick here to post a video</p></a>
                 </center>
                 <br>
