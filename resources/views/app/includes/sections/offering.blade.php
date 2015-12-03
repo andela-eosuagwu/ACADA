@@ -13,7 +13,10 @@
             <ul class="service_grid">
                 <i class="s1"> </i>
                 <li class="desc1 wow fadeInRight" data-wow-delay="0.4s">
-                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum</p>
+                <p>
+                    Education is no longer a one-time event but a lifelong experience. Education should be less passive 
+                    listening (no long lectures) and more active doing. Education should empower students to succeed not just in school but in life.  
+                </p>
                 </li>
                 <div class="clearfix"> </div>
             </ul>
@@ -22,7 +25,11 @@
             <ul class="service_grid">
                 <i class="s2"> </i>
                 <li class="desc1 wow fadeInRight" data-wow-delay="0.4s">
-                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum</p>
+                <p>
+                    Our mission is to bring accessible, affordable, engaging, 
+                    and highly effective higher education to the world. We believe that higher education is a basic human right, and we seek to empower our students to advance their education and careers.
+
+                </p>
                 </li>
                 <div class="clearfix"> </div>
             </ul>
