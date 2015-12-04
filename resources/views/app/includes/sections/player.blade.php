@@ -8,7 +8,6 @@
  @CodeFuntion: Video Player.
  -->
 
-
 @foreach( $video as $v )
 	<div class="banner">
 	    <div class="container_wrap margin-1">
