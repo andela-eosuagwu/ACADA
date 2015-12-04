@@ -69,8 +69,8 @@ class VideoController extends Controller
 
     public function show($category, $id)
     {
-        $video  = Video::where('id', $id);
-        return view('app.pages.play_video', compact('video'));
+        return $videos  = Video::where('id', $id);
+        //return view('app.pages.play_video', compact('videos'));
     }
 
     public function categories($category)
