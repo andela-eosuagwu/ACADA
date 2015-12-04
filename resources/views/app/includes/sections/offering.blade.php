@@ -14,8 +14,8 @@
                 <i class="s1"> </i>
                 <li class="desc1 wow fadeInRight" data-wow-delay="0.4s">
                 <p>
-                    Education is no longer a one-time event but a lifelong experience. Education should be less passive 
-                    listening (no long lectures) and more active doing. Education should empower students to succeed not just in school but in life.  
+                   ACADA is an educational learning platform that allows 
+                   developers share links of helpful videos.
                 </p>
                 </li>
                 <div class="clearfix"> </div>
@@ -26,9 +26,7 @@
                 <i class="s2"> </i>
                 <li class="desc1 wow fadeInRight" data-wow-delay="0.4s">
                 <p>
-                    Our mission is to bring accessible, affordable, engaging, 
-                    and highly effective higher education to the world. We believe that higher education is a basic human right, and we seek to empower our students to advance their education and careers.
-
+                    Our mission is to bring accessible information to developers, that aspires to build good software with the best approach.
                 </p>
                 </li>
                 <div class="clearfix"> </div>
