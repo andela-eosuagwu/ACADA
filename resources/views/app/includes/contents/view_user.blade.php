@@ -22,9 +22,8 @@
 
                 <div class="info">
                     <div class="title">
-                        <a target="_blank" href="http://scripteden.com/">Script Eden</a>
+                        <a href="#">{{Auth::user()->username}}</a>
                     </div>
-                    <div class="desc">{{Auth::user()->username}}</div>
                     <div class="desc">{{Auth::user()->occupation}}</div>
                 </div>
                 <center>
