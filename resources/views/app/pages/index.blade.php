@@ -11,7 +11,6 @@
 	| @location includes/sections/banner.blade.php
 	 -->
     @include('app.includes.sections.banner')
-    @include('app.includes.contents.create')
 
 	<!-- 
 	| include main content to home page
