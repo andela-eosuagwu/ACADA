@@ -18,7 +18,7 @@
                             <td>Username</td>
                             <td>{{Auth::user()->username}}</td>
                         </tr>
-                        @if (  Auth::user()->occupation === null || Auth::user()->occupation == '' )
+                        @if (  ! Auth::user()->occupation === null || ! Auth::user()->occupation == '' )
                             <tr>
                                 <td>Occupation</td>
                                 <td>{{Auth::user()->occupation}}</td>
