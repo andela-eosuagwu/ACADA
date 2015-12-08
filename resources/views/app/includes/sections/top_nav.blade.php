@@ -14,7 +14,7 @@
  Top navigation
  -->
 
-<div class="header">
+<div class="heaer">
     <div class="col-sm-7 header-left">
         
         <div class="logo">
