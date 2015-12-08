@@ -26,22 +26,12 @@
                     <div class="desc">Curious developer</div>
                     <div class="desc">Tech geek</div>
                 </div>
-                <div class="bottom">
-                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a class="btn btn-danger btn-sm" rel="publisher"
-                       href="https://plus.google.com/+ahmshahnuralam">
-                        <i class="fa fa-google-plus"></i>
-                    </a>
-                    <a class="btn btn-primary btn-sm" rel="publisher"
-                       href="https://plus.google.com/shahnuralam">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
-                        <i class="fa fa-behance"></i>
-                    </a>
-                </div>
+                <center>
+                    <p>
+                        <a href="/user/edit" class="btn  btn-primary" role="button">Edit Profile</a> 
+                        <a href="/user/videos" class="btn  btn-primary" role="button">My Videos</a> 
+                    </p>
+                </center>
             </div>
 
         </div>
