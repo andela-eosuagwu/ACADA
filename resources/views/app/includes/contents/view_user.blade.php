@@ -23,11 +23,12 @@
                                 <td>Occupation</td>
                                 <td>{{Auth::user()->occupation}}</td>
                             </tr>
+                        @else
+                            <tr>
+                                <td>Occupation</td>
+                                <td>add your occupation</td>
+                            </tr>
                         @endif
-                        <tr>
-                            <td>Email</td>
-                            <td>{{Auth::user()->email}}</td>
-                        </tr>
                         <tr>
                             <td></td>
                             <td></td>
