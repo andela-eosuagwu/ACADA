@@ -107,8 +107,8 @@ Route::group(['prefix' => 'video/'], function () {
     ]);
 
     Route::get('/{category}/{id}', [
-        'uses' => 'VideoController@show',
-        'as'   => 'video'
+        // 'uses' => 'VideoController@show',
+        // 'as'   => 'video'
     ]);
 
 });
