@@ -21,8 +21,8 @@
 
 
                 <div class="info">
-                    <div class="title">
-                        <a href="#">{{Auth::user()->username}}</a>
+                    <div class="title" style="font-size:14px;">
+                        {{Auth::user()->username}}
                     </div>
                     <div class="desc">{{Auth::user()->occupation}}</div>
                 </div>
