@@ -18,10 +18,12 @@
                             <td>Username</td>
                             <td>{{Auth::user()->username}}</td>
                         </tr>
-                        <tr>
-                            <td>Occupation</td>
-                            <td>{{Auth::user()->occupation}}</td>
-                        </tr>
+                        @if ( ! Auth::user()->occupation === null || Auth::user()->occupation == '' )
+                            <tr>
+                                <td>Occupation</td>
+                                <td>{{Auth::user()->occupation}}</td>
+                            </tr>
+                        @endif
                         <tr>
                             <td>Email</td>
                             <td>{{Auth::user()->email}}</td>
