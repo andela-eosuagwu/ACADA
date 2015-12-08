@@ -8,8 +8,6 @@
 
                 </div>
                 
-
-
                 @if( is_null(Auth::user()->avatar) || Auth::user()->avatar == '')
                     <div class="avatar">
                         <img alt="" src="{{ asset('res/images/profile.png') }}">
@@ -19,7 +17,6 @@
                         <img alt="" src="{{ Auth::user()->avatar}}">
                     </div>
                 @endif
-
 
                 <div class="info">
                     <div class="title">
