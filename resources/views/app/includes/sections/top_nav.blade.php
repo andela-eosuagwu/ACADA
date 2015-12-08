@@ -14,7 +14,7 @@
  Top navigation
  -->
 
-<div class="heaer">
+<div class="row">
     <div class="col-sm-7 header-left">
         
         <div class="logo">
@@ -57,9 +57,6 @@
         </div>
         <div class="clearfix"></div>
     </div>
-
-
-
 
     <div class="clearfix"></div>
 </div>

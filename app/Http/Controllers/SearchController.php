@@ -5,6 +5,7 @@ namespace ACADA\Http\Controllers;
 use ACADA\Video;
 use ACADA\Http\Requests;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use ACADA\Http\Controllers\Controller;
 
 class SearchController extends Controller
@@ -16,7 +17,8 @@ class SearchController extends Controller
      */
     public function index(Request $request)
     {
-        $categories = Video::where('title', $request['title'])->get();
+        $title = $request['title'];
+        $categories = DB::select("SELECT * FROM videos WHERE title like '%$title%'");
         return view('app.pages.category', compact('categories'));
     }
 
