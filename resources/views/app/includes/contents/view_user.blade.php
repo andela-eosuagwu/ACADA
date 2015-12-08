@@ -1,49 +1,42 @@
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<div class="container card-con">
+    <div class="row">
+        <div class="col-lg-3 col-sm-6">
 
- <div class="container">
-    <div class="content_middle_box centered" >
-        
-            <div class="row" style=" margin-left:398px; width:1260px; " >
-                <div class="col-xs-6 col-md-3">
-                    @if( is_null(Auth::user()->avatar) || Auth::user()->avatar == '')
-                        <a href="#" class="thumbnail">
-                            <img src="{{ asset('res/images/profile.png') }}" alt="...">
-                        </a>
-                    @else
-                        <a href="#" class="thumbnail">
-                            <img src="{{ Auth::user()->avatar}}" alt="...">
-                        </a>
-                    @endif
-                    <table class="table">
-                        <tr>
-                            <td>Username</td>
-                            <td>{{Auth::user()->username}}</td>
-                        </tr>
-                        @if (  ! Auth::user()->occupation === null || ! Auth::user()->occupation == '' )
-                            <tr>
-                                <td>Occupation</td>
-                                <td>{{Auth::user()->occupation}}</td>
-                            </tr>
-                        @else
-                            <tr>
-                                <td>Occupation</td>
-                                <td>add your occupation</td>
-                            </tr>
-                        @endif
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
-                    <br>
-                    <center>
-                        <p>
-                            <a href="/user/edit" class="btn  btn-primary" role="button">Edit Profile</a> 
-                            <a href="/user/videos" class="btn  btn-primary" role="button">My Videos</a> 
-                        </p>
-                    </center>
+            <div class="card hovercard">
+                <div class="cardheader">
+
                 </div>
-            </div>    
-        
+                <div class="avatar">
+                    <img alt="" src="http://lorempixel.com/100/100/people/9/">
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <a target="_blank" href="http://scripteden.com/">Script Eden</a>
+                    </div>
+                    <div class="desc">Passionate designer</div>
+                    <div class="desc">Curious developer</div>
+                    <div class="desc">Tech geek</div>
+                </div>
+                <div class="bottom">
+                    <a class="btn btn-primary btn-twitter btn-sm" href="https://twitter.com/webmaniac">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="btn btn-danger btn-sm" rel="publisher"
+                       href="https://plus.google.com/+ahmshahnuralam">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                    <a class="btn btn-primary btn-sm" rel="publisher"
+                       href="https://plus.google.com/shahnuralam">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="btn btn-warning btn-sm" rel="publisher" href="https://plus.google.com/shahnuralam">
+                        <i class="fa fa-behance"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
     </div>
 </div>
-
