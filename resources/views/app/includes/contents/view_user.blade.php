@@ -7,9 +7,20 @@
                 <div class="cardheader">
 
                 </div>
-                <div class="avatar">
-                    <img alt="" src="http://lorempixel.com/100/100/people/9/">
-                </div>
+                
+
+
+                @if( is_null(Auth::user()->avatar) || Auth::user()->avatar == '')
+                    <div class="avatar">
+                        <img alt="" src="{{ asset('res/images/profile.png') }}">
+                    </div>
+                @else
+                    <div class="avatar">
+                        <img alt="" src="{{ Auth::user()->avatar}}">
+                    </div>
+                @endif
+
+
                 <div class="info">
                     <div class="title">
                         <a target="_blank" href="http://scripteden.com/">Script Eden</a>
