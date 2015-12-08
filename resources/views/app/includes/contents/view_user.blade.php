@@ -18,13 +18,14 @@
                     </div>
                 @endif
 
+
+
                 <div class="info">
                     <div class="title">
                         <a target="_blank" href="http://scripteden.com/">Script Eden</a>
                     </div>
-                    <div class="desc">Passionate designer</div>
-                    <div class="desc">Curious developer</div>
-                    <div class="desc">Tech geek</div>
+                    <div class="desc">{{Auth::user()->username}}</div>
+                    <div class="desc">{{Auth::user()->occupation}}</div>
                 </div>
                 <center>
                     <p>
