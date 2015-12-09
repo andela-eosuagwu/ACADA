@@ -85,7 +85,7 @@
         <li><a href="#">Add Video</a></li>
       </ul>
 
-      <ul class="nav navbar-nav navbar-right" style="margin-top:20px;">
+      <ul class="nav navbar-nav navbar-right" style="margin-top:17px;">
       
         @if( ! Auth::check() )
           <li><a href="/auth/login">Login</a></li>
