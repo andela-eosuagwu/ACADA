@@ -30,6 +30,7 @@
                         <a href="/user/videos" class="btn  btn-primary" role="button">My Videos</a> 
                     </p>
                 </center>
+                <br>
             </div>
 
         </div>
