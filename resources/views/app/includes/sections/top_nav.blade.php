@@ -93,8 +93,8 @@
         @endif
 
         @if( Auth::check() )
-              <a href="/user" id=""><span>{{Auth::user()->username}}</span></a>     
-              <a style ="margin-left:40px;" href="/auth/logout" id=""><span>logout</span></a>     
+              <li><a href="/user">{{Auth::user()->username}}</a></li>
+              <li><a href="/auth/logout">logout</a></li>
           @endif   
 
       </ul>
