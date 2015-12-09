@@ -37,9 +37,9 @@ class VideoController extends Controller
         Video::create([
             'src'           => $data['src'],
             'title'         => $data['title'],
-            //'user_id'       => Auth::user()->id,
-            'user_id'       => 1,
+            'user_id'       => Auth::user()->id,
             'categories'    => $data['categories'],
+            'description'    => $data['description'],
         ]);
     }
 
@@ -51,6 +51,7 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
+        
         $this->save($request->all());        
         $response = "success";
         return view('app.pages.create', compact('response'));

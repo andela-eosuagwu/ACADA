@@ -12,7 +12,8 @@
 	<div class="banner">
 	    <div class="container_wrap margin-1">
 	        <h1>{{$video->title}}</h1>
-	        <iframe class="player" src="{{$video->src}}" frameborder="0" allowfullscreen></iframe>
+	        <h1 style="font-size:12px; margin-top: -20px; margin-bottm: 50px;">{{$video->description}}</h1>
+	        <iframe style=" margin-top: 10px;" class="player" src="{{$video->src}}" frameborder="0" allowfullscreen></iframe>
 	    </div>
 	</div>	
 @endforeach
