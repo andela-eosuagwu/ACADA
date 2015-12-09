@@ -18,30 +18,6 @@
                     </div>
                 @endif
 
-
-                                    <table class="table">
-                        <tr>
-                            <td>Username</td>
-                            <td>{{Auth::user()->username}}</td>
-                        </tr>
-                        @if (  ! Auth::user()->occupation === null || ! Auth::user()->occupation == '' )
-                            <tr>
-                                <td>Occupation</td>
-                                <td>{{Auth::user()->occupation}}</td>
-                            </tr>
-                        @else
-                            <tr>
-                                <td>Occupation</td>
-                                <td>add your occupation</td>
-                            </tr>
-                        @endif
-                        <tr>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </table>
-
-
                 <div class="info">
                     <div class="title" style="font-size:14px;">
                         {{Auth::user()->username}}

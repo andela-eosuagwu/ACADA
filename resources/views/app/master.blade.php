@@ -6,11 +6,17 @@
         
         <link href="{{ asset('res/css/bootstrap.css')  }}" rel='stylesheet' type='text/css' />        
         <link href="{{ secure_asset('res/css/bootstrap.css')  }}" rel='stylesheet' type='text/css' />        
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
         
+
         <link href="{{ asset('res/css/style.css')  }}" rel='stylesheet' type='text/css' />
         <link href="{{ secure_asset('res/css/style.css')  }}" rel='stylesheet' type='text/css' />
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         
+
+
+
 
         <!-- sweet -->
         <link href="{{ asset('res/sweetalert/sweetalert.css')  }}" rel='stylesheet' type='text/css' />
@@ -73,6 +79,10 @@
         {
             swal("Opps", "I'm sure you have to login to do that", "error")
         }
+        $('.collapse').collapse()
+        $('#myCollapsible').collapse({
+  toggle: false
+})
         </script>
     </body>
 </html>
