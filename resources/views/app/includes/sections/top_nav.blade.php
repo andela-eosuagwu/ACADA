@@ -63,7 +63,9 @@
 
 
 
-<nav class="navbar navbar">
+<nav class="navbar navbar-default">
+<br>
+<br>
   <div class="container-fluid">
     
     <!-- Brand and toggle get grouped for better mobile display -->
