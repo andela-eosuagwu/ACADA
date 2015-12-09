@@ -74,7 +74,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/"> <img style="width:100px; margin-top:-10px;" src="{{ asset('res/images/logo.png') }}" alt=""/></a>
+      <a class="navbar-brand" href="/"> <img style="width:100px; margin-top:-5px;" src="{{ asset('res/images/logo.png') }}" alt=""/></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -85,7 +85,7 @@
         <li><a href="#">Add Video</a></li>
       </ul>
 
-      <ul class="nav navbar-nav navbar-right" style="margin-top:17px;">
+      <ul class="nav navbar-nav navbar-right" style="margin-top:9px;">
       
         @if( ! Auth::check() )
           <li><a href="/auth/login">Login</a></li>
