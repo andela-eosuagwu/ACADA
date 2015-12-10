@@ -17,13 +17,13 @@
                     <option value="nodejs">NODEJS</option>
                 </select>
 
-                <input type="text" required="required" name="src" class="text" placeholder = "Video Link"  style="margin-left:20px">
+                <input type="text" required="required" name="src" class="text" placeholder = "Add youtube video url"  style="margin-left:20px">
                 <div class="clearfix"></div>
             </div>
 
 
                 <center>        
-                <input type="text" required="required" name="description" class="text category_option" placeholder = "Add short description">
+                <input style="width:80%" type="text" required="required" name="description" class="text category_option" placeholder = "Add short description">
                 </center>
             
             @if(   Auth::check() )  
