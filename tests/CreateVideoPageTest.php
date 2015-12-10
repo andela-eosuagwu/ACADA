@@ -7,25 +7,19 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class CreateVideoPageTest extends TestCase
 {
-
-    protected function createVideo ()
+    public function testVideoUpload()
     {
-        $video = Video::create([
-            'src'           => 'src',
-            'title'         => 'title',
-            'user_id'       => 1,
-            'categories'    => 'categories',
-            'description'   => 'description',
-        ]);
+        $user = factory(\ACADA\User::class)->create();
 
-        return $video;
-    }
-
-    public function testForCreatingOneVideo()
-    {
-        $this->createVideo();
-        $video = Video::all();
-        $this->assertEquals(1, sizeof($video));
+        $this->actingAs($user)
+             ->visit('/video/create');
+        
+            $this->type('video title', 'title')
+                   ->type('some random text', 'description')
+                   ->type('https://www.youtube.com/watch?v=7KAhgrBDl3A', 'src')
+                   ->select('php', 'categories')
+                   ->press('Create');
+            $this->assertResponseOk();
     }
 
 }
