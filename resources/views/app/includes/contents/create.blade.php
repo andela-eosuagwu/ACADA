@@ -17,7 +17,7 @@
                     <option value="nodejs">NODEJS</option>
                 </select>
 
-                <input type="text" required="required" name="src" class="text" placeholder = "Add youtube video url"  style="margin-left:20px">
+                <input type="text" required="required" name="src" class="text" placeholder = "Add youtube embed url"  style="margin-left:20px">
                 <div class="clearfix"></div>
             </div>
 
