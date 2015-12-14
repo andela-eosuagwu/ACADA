@@ -83,7 +83,7 @@ class VideoController extends Controller
 
     public function user()
     {
-        $categories =  User::all();
+        $categories =  User::all()->first();
         foreach ($categories as $value) 
         {
             return $categories = $value->video;
