@@ -83,7 +83,7 @@ class VideoController extends Controller
 
     public function user()
     {
-        $categories =  User::all();
+        $categories =  User::where('id', Auth::user()->id)->get();
 
         foreach ($categories as $value) 
         {
