@@ -12,7 +12,8 @@
 	 -->
     
     @include('app.includes.sections.banner')
-	 
+	
+    @include('app.includes.contents.create')
 	<!-- 
 	| include main content to home page
 	| @location includes/contents/main.blade.php

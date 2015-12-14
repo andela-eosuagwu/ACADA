@@ -83,10 +83,11 @@ class VideoController extends Controller
 
     public function user()
     {
-        $categories =  User::all()->first();
+        $categories =  User::all();
+
         foreach ($categories as $value) 
         {
-            return $categories = $value->video;
+            $categories = $value->video;
         }
         return view('app.pages.view', compact('categories'));
     }

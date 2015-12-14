@@ -26,7 +26,7 @@
                 <input style="width:80%" type="text" required="required" name="description" class="text category_option" placeholder = "Add short description">
                 </center>
             
-            @if(   Auth::check() )  
+            @if( !  Auth::check() )  
             <div class="form-submit1">
                <input name="submit" type="submit" id="submit" value="Create">
             </div>
