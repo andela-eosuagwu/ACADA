@@ -1,45 +1,25 @@
-<div class="footer">
-    <div class="container">
-<!--         <div class="footer_top">
-            <h3>Subscribe to our newsletter</h3>
-            <form>
-            <span>
-            <i><img src="{{ asset('res/images/mail.png') }}" alt=""></i>
-            <input type="text" value="Enter your email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter your email';}">
-            <label class="btn1 btn2 btn-2 btn-2g"> <input name="submit" type="submit" id="submit" value="Subscribe"> </label>
-            <div class="clearfix"> </div>
-            </span>                 
-            </form>
-        </div> -->
-        <div class="footer_grids">
-            <div class="footer-grid">
-                <h4>Site Map</h4>
-                <ul class="list1">
-                    <li><a href="/contact">Contact</a></li>
+       <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
                 </ul>
+              </div>
             </div>
-            <div class="footer-grid">
-                <h4>Categories</h4>
-                <ul class="list1">
-                    <li><a href="/video/php">php</a></li>
-                    <li><a href="/video/ruby">ruby</a></li>
-                    <li><a href="/video/java">java</a></li>
-                    <li><a href="/video/nodejs">node</a></li>
-                </ul>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
-            <div class="footer-grid last_grid">
-                <h4>Follow Us</h4>
-                <ul class="footer_social wow fadeInLeft" data-wow-delay="0.4s">
-                <li><a href=""> <i class="fb"> </i> </a></li>
-                <li><a href=""><i class="tw"> </i> </a></li>
-                <li><a href=""><i class="google"> </i> </a></li>
-                <li><a href=""><i class="u_tube"> </i> </a></li>
-                </ul>
-                <div class="copy wow fadeInRight" data-wow-delay="0.4s">
-                <p>&copy; ACADA 2015 </p>
-                </div>
-            </div>
-            <div class="clearfix"> </div>
-        </div>
-    </div>
-</div>
+          </div>
+        </footer>

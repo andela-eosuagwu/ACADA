@@ -18,8 +18,10 @@ class VideoController extends Controller
      */
     public function index()
     {
-        $videos =  Video::get()->take(4);
-        return view('app.pages.index', compact('videos'));
+        $data =  $this->videoRepository->getAllVideo();
+
+        return $data;
+        return view('app.index', compact('data'));
     }
 
     /**
@@ -51,8 +53,8 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        
-        $this->save($request->all());        
+
+        $this->save($request->all());
         $response = "success";
         return view('app.pages.create', compact('response'));
     }
@@ -85,7 +87,7 @@ class VideoController extends Controller
     {
         $categories =  User::where('id', Auth::user()->id)->get();
 
-        foreach ($categories as $value) 
+        foreach ($categories as $value)
         {
             $categories = $value->video;
         }

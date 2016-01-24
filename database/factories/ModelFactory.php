@@ -21,11 +21,11 @@ $factory->define(ACADA\Video::class, function (Faker\Generator $faker) {
 
 $factory->define(ACADA\User::class, function (Faker\Generator $faker) {
     return [
-        'username'       => $faker->name,
-        'email'          => $faker->email,
-        'password'       => $faker->password,
-        'avatar'       => $faker->imageUrl,
-        'avatar'       	=> $faker->imageUrl,
+        'username'      => $faker->name,
+        'email'         => $faker->email,
+        'password'      => $faker->password,
+        'avatar'        => $faker->imageUrl,
+        'avatar'        => $faker->imageUrl,
         'oauth'       	=> 1,
         'occupation'    => $faker->name
     ];

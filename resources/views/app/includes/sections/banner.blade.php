@@ -1,25 +1,14 @@
-<!-- 
- The file for the Arr class
+<section class="section banner" ng-controller="searchController">
 
- @author     Emeka Osuagwu <emekaosuagwuandela0@gmail.com>
- @copyright  2015 Emeka Osuagwu
- @license    MIT License <http://opensource.org/licenses/MIT>   
- -->
+	<h1 class="font-1" style="color:#26a69a;">ACADA</h1>
+	<p class="font-2">Learn how to easily start using Materialize in your website.</p>
 
-<div class="banner">
-    <div class="container_wrap">
-        <h1>What are you looking for?</h1>
-        <div class="dropdown-buttons">   
 
-        </div>  
-        <form action="search" method="get">
-            <input type="text" name="title">
-            <div class="contact_btn">
-                <label class="btn1 btn-2 btn-2g">
-                    <input type="submit" id="submit">
-                </label>
-            </div>
-        </form>             
-        <div class="clearfix"></div>
-    </div>
-</div>
+	<div class="input-field col s12">
+		<label for="search" data-error="wrong" data-success="right">Search by Title or Category </label>
+		<input id="search" type="text" class="validate">
+	</div>
+
+	<button class="btn waves-effect waves-light" type="submit" ng-click="search()">Search</button>
+
+</section>

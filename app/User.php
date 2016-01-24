@@ -2,6 +2,9 @@
 
 namespace ACADA;
 
+use ACADA\Like;
+use ACADA\View;
+use ACADA\Favourite;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
@@ -41,4 +44,15 @@ class User extends Model implements AuthenticatableContract,
     {
         return $this->hasMany('ACADA\Video');
     }
+
+    public function favourite()
+    {
+        return $this->hasMany('ACADA\Favourite');
+    }
+
+    public function view()
+    {
+        return $this->hasMany('ACADA\View');
+    }
+
 }

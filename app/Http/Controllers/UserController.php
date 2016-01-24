@@ -2,8 +2,8 @@
 
 namespace ACADA\Http\Controllers;
 
-use ACADA\User;
 use Cloudder;
+use ACADA\User;
 use ACADA\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -22,25 +22,25 @@ class UserController extends Controller
     {
         $user = User::where('id', Auth::user()->id)->get();
         return view('app.pages.edit_user', compact('user'));
-        
+
     }
 
     public function update(Request $request)
     {
         $id     = Auth::user()->id;
         $user   = User::find($id);
-        
-        if (  $request['avatar']) 
+
+        if (  $request['avatar'])
         {
             $avater_url = $this->getImageUrl($request['avatar']);
             $user->avatar = $avater_url;
         }
-        
+
         $user->occupation   = $request['occupation'];
         $user->username     = $request['username'];
         $user->save();
-        return redirect("user");        
-    }  
+        return redirect("user");
+    }
 
     public function getImageUrl ()
     {

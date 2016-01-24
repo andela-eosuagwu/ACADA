@@ -1,0 +1,92 @@
+/*Banner style*/
+.banner {
+	text-align: center;
+}
+
+.banner p {
+	font-size: 20px;
+}
+
+.tag {
+    font-size: 15px;
+    background-color: #26a69a;
+    display: inline-block;
+    padding: 5px 10px;
+    color: #fff;
+    margin: 0;
+}
+
+.line {
+    height: 2px;
+    background-color: #26a69a;
+    bottom: 0;
+    clear: both;
+}
+
+/*recent video style*/
+
+.recent-video .video-title {
+    padding: 10px;
+    text-align: center;
+    border-radius: 0 0 2px 2px;
+}
+
+.recent-video .play-video-link {
+	text-align: center;
+}
+
+.recent-video .status-icon {
+    font-size: 1vw;
+}
+
+.recent-video .status-icon li {
+	display: initial;
+	margin-left: 4px;
+}
+
+.recent-video .btn-floating.btn {
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+
+
+/*subscribe style*/
+.subscribe {
+	text-align: center;
+}
+
+.subscribe input {
+	width: 70%;
+	margin-bottom: 10px;
+}
+
+
+/*auth-container*/
+.auth-container {
+	float: inherit;
+	margin: 0 auto!important;
+}
+
+form.col.s12.l6.auth-container {
+    float: inherit;
+    width: 0 auto;
+}
+
+/*dashboard tab*/
+.col > .tab-container {
+    margin-top: 40px!important;
+    margin-bottom: 20px;
+}
+
+.tab-content {
+    margin-top: 20px;
+}
+
+.action {
+    margin-top: 10px;
+}
+
+.user-profile-img{
+    width: 60%;
+}
