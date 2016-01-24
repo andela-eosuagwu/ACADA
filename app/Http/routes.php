@@ -30,13 +30,13 @@ Route::group(['prefix' => 'user/'], function () {
     Route::get('/', [
         'uses' => 'UserController@index',
         'as'   => 'user',
-        'middleware'=> ['auth']
+        //'middleware'=> ['auth']
     ]);
 
     Route::get('edit', [
         'uses' => 'UserController@edit',
         'as'   => 'user/user',
-        'middleware'=> ['auth']
+        //'middleware'=> ['auth']
     ]);
 
     Route::post('update', [
@@ -110,6 +110,11 @@ Route::group(['prefix' => 'video/'], function () {
     Route::get('/{category}/{id}', [
         'uses' => 'VideoController@show',
         'as'   => 'video'
+    ]);
+
+    Route::get('like/{video_id}/{user_id}', [
+        'uses' => 'LikeController@postLike',
+        'as'   => 'video.like'
     ]);
 
 });

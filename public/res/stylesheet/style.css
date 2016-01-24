@@ -90,3 +90,16 @@ form.col.s12.l6.auth-container {
 .user-profile-img{
     width: 60%;
 }
+
+
+
+
+
+
+.can_like {
+    color: #000;
+}
+
+.can_dislike {
+    color: blue;
+}

@@ -12,13 +12,15 @@ class LikeController extends Controller
     /*
     # postLike
     */
-    public function postLike()
+    public function postLike(Request $request)
     {
-        $video        = $this->videoRepository->findVideoById(1);
+       
+
+        $video        = $this->videoRepository->findVideoById($request['video_id']);
         $video->likes = $video->likes + 1;
         $video->save();
 
-        return $this->likeRepository->insertIntoLikesTable(1, 1);
+        return $this->likeRepository->insertIntoLikesTable($request['video_id'], $request['user_id']);
     }
 
     /*

@@ -21,10 +21,10 @@ class VideoController extends Controller
         $video_data =  $this->videoRepository->getAllVideo();
 
         $video_data->each(function ($video_data, $key) {
-            $video_data->like_status = "can_like";
+            $video_data->like_status = "can_dislike";
             $video_data->favourite_status = "can_favourite";
         });
-    
+
         return view('app.index', compact('video_data'));
     }
 
