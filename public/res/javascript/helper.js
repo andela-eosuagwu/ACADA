@@ -3,10 +3,7 @@
 
     // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
     $('.modal-trigger').leanModal();
-
-    function uploadModal() {
-    	$('#mpppodal1').openModal();
-    }
+    	// $('#mpppodal1').openModal();
 
 
   });

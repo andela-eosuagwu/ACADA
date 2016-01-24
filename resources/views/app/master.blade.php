@@ -7,6 +7,8 @@
         <script src="{{ asset('/res/javascript/app/controller/videoController.js') }}"></script>
         <script src="{{ asset('/res/javascript/app/controller/subscribeController.js') }}"></script>
         <script src="{{ asset('/res/javascript/app/controller/uploadController.js') }}"></script>
+        <script src="{{ asset('/res/javascript/app/controller/loginController.js') }}"></script>
+        <script src="{{ asset('/res/javascript/app/controller/registerController.js') }}"></script>
 
         @include('app.includes.sections.head')
     </head>

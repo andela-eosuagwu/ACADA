@@ -3,7 +3,7 @@
 @section('title', 'Welcome to ACADA')
 
 @section('content')
-	<section class="section">
+	<section class="section" ng-controller="videoController">
 
 	<div class="row">
 
@@ -17,9 +17,9 @@
 	        	<iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
 	      	</div>
 	      	<div class="action">
-	      		<a class=" waves-effect waves-light btn"><i class="fa fa-play-circle"></i> Like</a>
-	      		<a class="waves-effect waves-light btn"><i class="fa fa-play-circle"></i> Like</a>
-	      		<a class="waves-effect waves-light btn"><i class="fa fa-play-circle"></i> Like</a>
+	      		<a class=" waves-effect waves-light btn" ng-click="likeVideo()"><i class="fa fa-thumbs-o-up"></i> Like</a>
+	      		<a class="waves-effect waves-light btn" ng-click="shareVideo()"><i class="fa fa-share-alt-square"></i> Share</a>
+	      		<a class="waves-effect waves-light btn" ng-click="favoriteVideo()"><i class="fa fa-play-circle"></i> Favorite</a>
 	      	</div>
     	</div>
 

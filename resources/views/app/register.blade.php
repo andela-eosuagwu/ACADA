@@ -4,26 +4,24 @@
 
 @section('content')
 
-	<section class="section">
+	<section class="section" ng-controller="registerController">
 		<h2 class="font-1 center">Register</h2>
 
 		<div class="row">
 			<form class="col s12 l6 auth-container">
-				<div class="row">
-					<div class="input-field col s6">
-						<input placeholder="Placeholder" id="first_name" type="text" class="validate">
-						<label for="first_name">First Name</label>
-					</div>
-					<div class="input-field col s6">
-						<input id="last_name" type="text" class="validate">
-						<label for="last_name">Last Name</label>
-					</div>
-				</div>
 
 				<div class="row">
 					<div class="input-field col s12">
-						<input disabled value="I am not editable" id="disabled" type="text" class="validate">
-						<label for="disabled">Disabled</label>
+						<input  id="username" type="text" class="validate">
+						<label for="username">Username</label>
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="input-field col s12">
+					<input id="email" type="email" class="validate">
+					<label for="email">Email</label>
 					</div>
 				</div>
 
@@ -34,17 +32,18 @@
 					</div>
 				</div>
 
-				<div class="row">
-					<div class="input-field col s12">
-					<input id="email" type="email" class="validate">
-					<label for="email">Email</label>
-					</div>
-				</div>
-
 				<p class="social-btn-container">
-					<a class="social-btn waves-effect waves-light btn">
+					<a class="social-btn waves-effect waves-light btn" ng-click="register()">
 						<i class="fa fa-facebook-official"></i>
-						Facebook
+						Login
+					</a>
+					<a class="s3 social-btn waves-effect waves-light btn">
+						<i class="fa fa-facebook-official"></i>
+						GitHub
+					</a>
+					<a class="s3 social-btn waves-effect waves-light btn">
+						<i class="fa fa-facebook-official"></i>
+						Twitter
 					</a>
 					<a class="s3 social-btn waves-effect waves-light btn">
 						<i class="fa fa-facebook-official"></i>
