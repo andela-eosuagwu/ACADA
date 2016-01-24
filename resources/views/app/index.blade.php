@@ -13,56 +13,65 @@
 
     <section class="section" ng-controller="videoController">
     	<div class="row">
+    		@if($video_data == null)
+    			<h1 class="font-1 center" style="color:#26a69a;">Oops! no video here.</h1>
+    		    <a href="/" style="color:#000">
+    		    	<h5 class="center-align font-2">Be the first to upload a video :)</h5>
+    		    </a>
 
-			<div class="col s12 m3 l3 recent-video">
+    		@endif
 
-				<div class="card">
+    		@foreach($video_data as $video)
+				<div class="col s12 m3 l3 recent-video">
 
-					<a class='dropdown-button btn-floating btn' href='#' data-activates='video-action'><i class="material-icons">add</i></a>
+					<div class="card">
 
-					<!-- Dropdown Structure -->
-					<ul id="video-action" class='dropdown-content'>
-						<li><a href="#!" ng-click="likeVideo()">Like</a></li>
-						<li><a href="#!">Share</a></li>
-						<li><a href="#!" ng-click="favoriteVideo()">favorite</a></li>
-						<li class="divider"></li>
-						<li><a href="#!" ng-click="deleteVideo()">Delete</a></li>
-					</ul>
+						<a class='dropdown-button btn-floating btn' href='#' data-activates='video-action{{$video->id}}'><i class="material-icons">add</i></a>
 
-					<div class="image-container card-image waves-effect waves-block waves-light">
-						<img class="activator responsive-img" src="{{ asset('res/images/java.png') }}">
-					</div>
-
-					<div class="card-content video-title">
-						<span class="card-title truncate activator grey-text text-darken-4">
-							Card Title Titeferferfer le
-						</span>
-						<p class="play-video-link">
-							<a href="/player" class="waves-effect waves-light btn">Play Video</a>
-						</p>
-						<ul class="status-icon">
-							<li>
-								<i class="fa fa-play-circle"></i>
-							</li>
-								300
-							<li>
-								<i class="fa fa-gratipay"></i>
-								 300
-							</li>
-
-							<li>
-								<i class="fa fa-gratipay"></i>
-								 300
-							</li>
-
-							<li>
-								<i class="fa fa-gratipay"></i>
-								 300
-							</li>
+						<!-- Dropdown Structure -->
+						<ul id="video-action{{$video->id}}" class='dropdown-content'>
+							<li><a href="#!" ng-click="likeVideo()">Like</a></li>
+							<li><a href="#!">Share</a></li>
+							<li><a href="#!" ng-click="favoriteVideo()">favorite</a></li>
+							<li class="divider"></li>
+							<li><a href="#!" ng-click="deleteVideo()">Delete</a></li>
 						</ul>
+
+						<div class="image-container card-image waves-effect waves-block waves-light">
+							<img class="activator responsive-img" src="{{ asset('res/images/java.png') }}">
+						</div>
+
+						<div class="card-content video-title">
+							<span class="card-title truncate activator grey-text text-darken-4">
+								{{$video->title}}
+							</span>
+							<p class="play-video-link">
+								<a href="/player" class="waves-effect waves-light btn">Play Video</a>
+							</p>
+							<ul class="status-icon">
+								<li>
+									<i class="fa fa-eye"></i>
+								</li>
+									{{$video->views}}
+								<li>
+									<i class="fa fa-thumbs-up"></i>
+									 {{$video->likes}}
+								</li>
+
+								<li>
+									<i class="fa fa-heart"></i>
+									 {{$video->favourite}}
+								</li>
+
+								<li>
+									<i class="fa fa-gratipay"></i>
+									 {{$video->view}}
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div>
+			@endforeach
     	</div>
     </section>
 

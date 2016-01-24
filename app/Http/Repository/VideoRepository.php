@@ -13,7 +13,7 @@ class VideoRepository
     */
     public function getAllVideo()
     {
-        return Video::all();
+        return Video::with('likes','favourite')->take(4)->orderBy('created_at', 'desc')->get();
     }
 
     /**

@@ -18,10 +18,14 @@ class VideoController extends Controller
      */
     public function index()
     {
-        $data =  $this->videoRepository->getAllVideo();
+        $video_data =  $this->videoRepository->getAllVideo();
 
-        return $data;
-        return view('app.index', compact('data'));
+        $video_data->each(function ($video_data, $key) {
+            $video_data->like_status = "can_like";
+            $video_data->favourite_status = "can_favourite";
+        });
+
+        return view('app.index', compact('video_data'));
     }
 
     /**

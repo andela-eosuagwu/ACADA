@@ -33,7 +33,7 @@ class LikeRepository
         $is_like_video = false;
 
         foreach ($likes as $like) {
-            if ($like->user_id == Auth::user()->id) {
+            if ($like->user_id == 1) {
                 $is_like_video = true;
                 break;
             }
