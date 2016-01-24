@@ -1,5 +1,5 @@
-<!-- Modal Structure -->
-<div id="modal1" class="modal" ng-controller="uploadController">
+  <!-- Modal Structure -->
+  <div id="uploadModal" class="modal" ng-controller="uploadController">
     <div class="modal-content">
         <div class="row">
             <form class="col s12 l6 auth-container">
@@ -43,13 +43,9 @@
         </div>
     </div>
     <div class="modal-footer">
-
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat" ng-click="uploadVideo()">Cancel</a>
     </div>
-</div>
-
-
-
-
+  </div>
 
 
 
