@@ -24,7 +24,7 @@ class VideoController extends Controller
             $video_data->like_status = "can_like";
             $video_data->favourite_status = "can_favourite";
         });
-
+    
         return view('app.index', compact('video_data'));
     }
 
