@@ -25,5 +25,3 @@
 
 <link rel="stylesheet" type="text/css" href="{{ asset('res/javascript/sweetalert/sweetalert.css') }}">
 <script src="{{ asset('res/javascript/sweetalert/sweetalert.min.js') }}"></script>
-
-<script src="{{ asset('res/javascript/helper.js') }}"></script>

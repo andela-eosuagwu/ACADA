@@ -30,13 +30,13 @@ Route::group(['prefix' => 'user/'], function () {
     Route::get('/', [
         'uses' => 'UserController@index',
         'as'   => 'user',
-        'middleware'=> ['auth']
+        //'middleware'=> ['auth']
     ]);
 
     Route::get('edit', [
         'uses' => 'UserController@edit',
         'as'   => 'user/user',
-        'middleware'=> ['auth']
+        //'middleware'=> ['auth']
     ]);
 
     Route::post('update', [

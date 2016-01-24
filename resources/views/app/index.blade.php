@@ -11,7 +11,7 @@
    		<div class="line"></div>
     </section>
 
-    <section class="section" ng-controller="videoController">
+    <section class="section">
     	<div class="row">
     		@if($video_data == null)
     			<h1 class="font-1 center" style="color:#26a69a;">Oops! no video here.</h1>
@@ -30,11 +30,11 @@
 
 						<!-- Dropdown Structure -->
 						<ul id="video-action{{$video->id}}" class='dropdown-content'>
-							<li><a href="#!" ng-click="likeVideo()">Like</a></li>
+							<li><a href="#!" class="video_action" >Like</a></li>
 							<li><a href="#!">Share</a></li>
-							<li><a href="#!" ng-click="favoriteVideo()">favorite</a></li>
+							<li><a href="#!" >favorite</a></li>
 							<li class="divider"></li>
-							<li><a href="#!" ng-click="deleteVideo()">Delete</a></li>
+							<li><a href="#!" >Delete</a></li>
 						</ul>
 
 						<div class="image-container card-image waves-effect waves-block waves-light">
@@ -49,23 +49,23 @@
 								<a href="/player" class="waves-effect waves-light btn">Play Video</a>
 							</p>
 							<ul class="status-icon">
-								<li>
+								<li class="{{$video->like_status}}">
 									<i class="fa fa-eye"></i>
+									10
 								</li>
-									{{$video->views}}
 								<li>
 									<i class="fa fa-thumbs-up"></i>
-									 {{$video->likes}}
+									 10
 								</li>
 
 								<li>
 									<i class="fa fa-heart"></i>
-									 {{$video->favourite}}
+									 10
 								</li>
 
 								<li>
 									<i class="fa fa-gratipay"></i>
-									 {{$video->view}}
+									 10
 								</li>
 							</ul>
 						</div>

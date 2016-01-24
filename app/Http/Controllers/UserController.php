@@ -14,8 +14,9 @@ class UserController extends Controller
 {
     public function index()
     {
-        $user = User::find(Auth::user()->id)->get();
-        return view('app.pages.user', compact('user'));
+        //$user = User::find(Auth::user()->id)->get();
+        //return view('app.pages.user', compact('user'));
+        return view('app.video');
     }
 
     public function edit()
