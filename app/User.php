@@ -55,4 +55,9 @@ class User extends Model implements AuthenticatableContract,
         return $this->hasMany('ACADA\View');
     }
 
+    public function likes()
+    {
+        return $this->hasMany('ACADA\Like');
+    }
+
 }

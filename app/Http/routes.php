@@ -33,6 +33,9 @@ Route::group(['prefix' => 'user/'], function () {
         //'middleware'=> ['auth']
     ]);
 
+
+
+
     Route::get('edit', [
         'uses' => 'UserController@edit',
         'as'   => 'user/user',
@@ -57,21 +60,22 @@ Route::group(['prefix' => 'user/'], function () {
 Route::group(['prefix' => 'auth/'], function () {
 
     Route::get('login', function () {
-        return view('app.pages.signin');
+        return view('app.login');
     });
 
-    Route::get('register', function () {
-        return view('app.pages.signup');
-    });
-
-    Route::post('/signin', [
-        'uses' => 'Auth\AuthController@postSignin',
-        'as'   => 'signin'
+    Route::post('/login', [
+        'uses' => 'Auth\AuthController@postLogin',
+        'as'   => 'auth.login'
     ]);
 
-    Route::post('signup', [
-        'uses' => 'Auth\AuthController@postSignup',
-        'as'   => 'signup'
+    Route::get('register', function () {
+        return view('app.register');
+    });
+
+
+    Route::post('register', [
+        'uses' => 'Auth\AuthController@postRegister',
+        'as'   => 'auth.register'
     ]);
 
 

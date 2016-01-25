@@ -54,8 +54,8 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
-
+    'from' => ['address' => env('SENDER_ADDRESS', ''), 'name' => env('SENDER_NAME', '')],
+    //'from' => ['address' => 'admin@suyabay.com', 'name' => 'Suyabay'],
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol

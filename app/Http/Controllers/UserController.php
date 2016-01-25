@@ -14,9 +14,11 @@ class UserController extends Controller
 {
     public function index()
     {
-        //$user = User::find(Auth::user()->id)->get();
-        //return view('app.pages.user', compact('user'));
-        return view('app.video');
+        $data = User::where('id', 1)
+        ->with('favourite', 'view', 'likes')
+        ->get()->first();
+
+        return view('app.video', compact('data'));
     }
 
     public function edit()

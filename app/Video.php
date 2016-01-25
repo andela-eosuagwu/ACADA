@@ -16,7 +16,7 @@ class Video extends Model
 		return $this->belongsTo('ACADA\User');
 	}
 
-	public function likes()
+	public function like()
     {
         return $this->hasMany('ACADA\Like');
     }

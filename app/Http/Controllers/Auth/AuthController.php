@@ -3,10 +3,11 @@
 namespace ACADA\Http\Controllers\Auth;
 
 use Auth;
-use ACADA\User;
 use Validator;
+use ACADA\User;
 use Illuminate\Http\Request;
 use ACADA\Http\Checker\Checker;
+use Illuminate\Mail\Mailer as Mail;
 use ACADA\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
@@ -31,8 +32,9 @@ class AuthController extends Controller
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Mail $mail)
     {
+        $this->mail = $mail;
         $this->middleware('guest', ['except' => 'getLogout']);
     }
 
@@ -49,6 +51,12 @@ class AuthController extends Controller
             'username'  => $data['username'],
             'password'  => bcrypt($data['password']),
         ]);
+
+        $this->send('email.welcome', ['name' => $data['username']], function ($message) use ($data)
+        {
+            $message->from(getenv('SENDER_ADDERSS'), getenv('SENDER_NAME'));
+            $message->to($data('email'))->subject('Welcme to ACADA');
+        });
     }
 
     /**
@@ -57,16 +65,17 @@ class AuthController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function postSignup(Request $request)
+    protected function postRegister(Request $request)
     {
+
         $email      = $request['email'];
         $username   = $request['username'];
         $password   = $request['password'];
 
-        if ( Checker::checkByUserEmail($email) === "present" || Checker::checkByUserName($username) === "present") 
+        if ( Checker::checkByUserEmail($email) === "present" || Checker::checkByUserName($username) === "present")
         {
             $response = "Failed";
-            return view('app.pages.signup', compact('response'));
+            return view('app.register', compact('response'));
         }
         else
         {
@@ -83,14 +92,14 @@ class AuthController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function postSignin(Request $request)
+    protected function postLogin(Request $request)
     {
         $status = Auth::attempt($request->only(['username', 'password']));
-        
+
         if ( ! $status )
         {
             $response = "Failed";
-            return view('app.pages.signin', compact('response'));
+            return view('app.login', compact('response'));
         }
         else
         {
