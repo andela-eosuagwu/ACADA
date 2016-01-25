@@ -30,13 +30,21 @@
 
 						<!-- Dropdown Structure -->
 						<ul id="video-action{{$video->id}}" class='dropdown-content'>
-							
-							<li><a href="/video/like/1/1" class="video_action" >Like</a></li>
+
+						    <input
+						    	class="hidden_input"
+						    	hidden="true"
+						    	token="{{ csrf_token() }}"
+						    	user_id=1
+						    	video_id=1
+						    >
+
+							<li><a href="#" class="video_like_action" >Like</a></li>
 							<li><a href="#!">Share</a></li>
 							<li><a href="#!" >favorite</a></li>
 							<li class="divider"></li>
-							<li><a href="#!" >Delete</a></li>
-					
+							<li><a href="#!" class="video_delete_action">Delete</a></li>
+
 
 						</ul>
 

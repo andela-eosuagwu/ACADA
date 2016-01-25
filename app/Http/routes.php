@@ -112,7 +112,7 @@ Route::group(['prefix' => 'video/'], function () {
         'as'   => 'video'
     ]);
 
-    Route::get('like/{video_id}/{user_id}', [
+    Route::post('like', [
         'uses' => 'LikeController@postLike',
         'as'   => 'video.like'
     ]);

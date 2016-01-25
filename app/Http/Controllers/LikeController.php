@@ -14,8 +14,6 @@ class LikeController extends Controller
     */
     public function postLike(Request $request)
     {
-       
-
         $video        = $this->videoRepository->findVideoById($request['video_id']);
         $video->likes = $video->likes + 1;
         $video->save();
