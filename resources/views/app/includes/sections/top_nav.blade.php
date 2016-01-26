@@ -15,10 +15,10 @@
 </nav>
 
 <ul id="categories-dropdown" class="dropdown-content">
-	<li><a href="/category">PHP</a></li>
-	<li><a href="#!">JAVA</a></li>
-	<li><a href="#!">Node Js</a></li>
-	<li><a href="#!">Javascript</a></li>
+	<li><a href="/video/category/php">PHP</a></li>
+	<li><a href="/video/category/java">JAVA</a></li>
+	<li><a href="/video/category/node">Node Js</a></li>
+	<li><a href="/video/category/javascript">Javascript</a></li>
 </ul>
 
 @include('app.includes.sections.model')

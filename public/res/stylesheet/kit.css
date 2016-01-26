@@ -44,3 +44,11 @@ body {
 a.brand-logo {
     margin-top: 10px;
 }
+
+.tag {
+	text-transform: capitalize;
+}
+
+a.waves-effect.waves-light.btn.dislike:hover {
+    background-color: #E27979;
+}

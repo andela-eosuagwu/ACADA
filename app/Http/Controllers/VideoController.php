@@ -75,16 +75,35 @@ class VideoController extends Controller
         return view('app.pages.category', compact('categorys'));
     }
 
-    public function show($category, $id)
+    public function show($id)
     {
-        $videos  = Video::where('id', $id)->get();
-        return view('app.pages.play_video', compact('videos'));
+        $video  = Video::where('id', $id)->get()->first();
+
+        $video->like_status = "like";
+        $video->favourite_status = "unfavourite";
+
+        $related_video =  Video::where('categories', $video->categories)->take(5)->get();
+        $data =
+        [
+            "video"         => $video,
+            "related_video" => $related_video
+        ];
+
+        //return $data;
+        return view('app.player', compact('data'));
     }
 
     public function categories($category)
     {
         $categories =  Video::where('categories', $category)->get();
-        return view('app.pages.cas', compact('categories'));
+
+        $data =
+        [
+            "title"         => $category,
+            "categories"    => $categories
+        ];
+
+        return view('app.category', compact('data'));
     }
 
     public function user()

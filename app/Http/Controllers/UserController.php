@@ -15,8 +15,17 @@ class UserController extends Controller
     public function index()
     {
         $data = User::where('id', 1)
-        ->with('favourite', 'view', 'likes')
+        ->with('video')
         ->get()->first();
+
+        $user_data = User::where('id', 1)->get()->first();
+
+        $data =
+        [
+            "user_data"     => $user_data,
+            "uploaded"      => $user_data->video,
+            "favourite"     => $user_data->favourite
+        ];
 
         return view('app.video', compact('data'));
     }
@@ -25,7 +34,6 @@ class UserController extends Controller
     {
         $user = User::where('id', Auth::user()->id)->get();
         return view('app.pages.edit_user', compact('user'));
-
     }
 
     public function update(Request $request)

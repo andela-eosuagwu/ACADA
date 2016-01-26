@@ -18,8 +18,11 @@ class SearchController extends Controller
     public function index(Request $request)
     {
         $title = $request['title'];
-        $categories = DB::select("SELECT * FROM videos WHERE title like '%$title%'");
-        return view('app.pages.category', compact('categories'));
+        $data = DB::select("SELECT * FROM videos WHERE categories like '%$title%'");
+
+        //return $data;
+
+        return view('app.search', compact('data'));
     }
 
     /**
@@ -45,8 +48,8 @@ class SearchController extends Controller
         //$video = Video::all()->where('category', 'php')->find($id);
         $video      = Video::all()->where('category', 'php')->find($id);
         $feature    = Video::all()->where('category', 'php')->take(4);
-        
-        $data = 
+
+        $data =
         [
             "video"     => $video,
             "feature"   => $feature

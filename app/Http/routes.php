@@ -33,9 +33,6 @@ Route::group(['prefix' => 'user/'], function () {
         //'middleware'=> ['auth']
     ]);
 
-
-
-
     Route::get('edit', [
         'uses' => 'UserController@edit',
         'as'   => 'user/user',
@@ -106,7 +103,12 @@ Route::group(['prefix' => 'video/'], function () {
         'middleware'=> ['auth']
     ]);
 
-    Route::get('{category}', [
+    Route::get('{id}', [
+        'uses' => 'VideoController@show',
+        'as'   => 'video.category'
+    ]);
+
+    Route::get('category/{category}', [
         'uses' => 'VideoController@categories',
         'as'   => 'video.category'
     ]);
@@ -116,9 +118,24 @@ Route::group(['prefix' => 'video/'], function () {
         'as'   => 'video'
     ]);
 
-    Route::post('like', [
+    Route::get('like/{video_id}/{user_id}', [
         'uses' => 'LikeController@postLike',
         'as'   => 'video.like'
+    ]);
+
+    Route::get('dislike/{video_id}/{user_id}', [
+        'uses' => 'LikeController@postUnLike',
+        'as'   => 'video.dislike'
+    ]);
+
+    Route::get('favourite/{video_id}/{user_id}', [
+        'uses' => 'FavouriteController@favourite',
+        'as'   => 'video.favourite'
+    ]);
+
+    Route::get('unfavourite/{video_id}/{user_id}', [
+        'uses' => 'FavouriteController@unfavourite',
+        'as'   => 'video.unfavourite'
     ]);
 
 });

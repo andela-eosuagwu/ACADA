@@ -21,13 +21,11 @@
 		    		    	<h5 class="center-align font-2">Click here to upload a video</h5>
 		    		    </a>
 		    		@else
-
+		    			@include('app.includes.sections.video_list')
 		    		@endif
 
 		    	</div>
 		    </section>
-
-
 		</div>
 
 		<div id="test2" class="col s12 tab-content">
