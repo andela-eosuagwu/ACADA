@@ -17,7 +17,7 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
+            © 2016
             </div>
           </div>
         </footer>
