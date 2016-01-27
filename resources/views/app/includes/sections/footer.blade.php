@@ -20,28 +20,19 @@
                                                     <li><a href="#">PHP</a></li>
                                             </ul>
                 </div>
-                <div class="col-md-3">
-                    <h4>Post Categories</h4>
-                    <ul>
-                                                    <li><a href="#">Tutorials</a></li>
-                                                    <li><a href="#">Chit Chat</a></li>
-                                                    <li><a href="#">Technology</a></li>
-                                                    <li><a href="#">How To</a></li>
-                                            </ul>
-                </div>
                 <div class="col-md-2">
                     <h4>Links</h4>
                     <ul>
-                                                    <li><a href="http://devdojo.com/page/about">About</a></li>
-                                                    <li><a href="http://devdojo.com/page/laravel-survival-guide">The Laravel Survival Guide</a></li>
-                                                <li><a href="/login">Login</a></li>
-                        <li><a href="/signup">Signup</a></li>
+
+                        <li><a href="/">Home</a></li>
+                        <li><a href="auth/login">Login</a></li>
+                        <li><a href="/auth/register">Signup</a></li>
                     </ul>
                 </div>
             </div>
 
             <hr>
-            <p class="copyright">Copyright © 2016 DevDojo</p>
+            <p class="copyright">Copyright © 2016 ACADA</p>
 
         </div>
     </footer>
