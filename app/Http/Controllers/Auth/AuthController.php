@@ -80,7 +80,7 @@ class AuthController extends Controller
         else
         {
             $this->create($request->all());
-            return redirect('/');
+            return view('app.register', compact('response'));
         };
 
         return $response;

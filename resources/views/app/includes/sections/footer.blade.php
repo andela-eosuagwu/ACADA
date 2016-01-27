@@ -18,11 +18,6 @@
                                                     <li><a href="#">CSS</a></li>
                                                     <li><a href="#">Javascript</a></li>
                                                     <li><a href="#">PHP</a></li>
-                                                    <li><a href="#">SQL</a></li>
-                                                    <li><a href="#">Misc</a></li>
-                                                    <li><a href="#">jQuery</a></li>
-                                                    <li><a href="#">Laravel</a></li>
-                                                    <li><a href="#">Tools</a></li>
                                             </ul>
                 </div>
                 <div class="col-md-3">
@@ -57,19 +52,7 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 
 

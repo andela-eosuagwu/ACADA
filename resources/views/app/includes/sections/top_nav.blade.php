@@ -39,8 +39,8 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="login-desktop"><a href="/login"><i class="fa fa-lock"></i> Login</a></li>
-                    <li class="signup-desktop"><a href="/signup"><i class="fa fa-user"></i> Signup</a></li>
+                    <li class=""><a href="/auth/login"><i class="fa fa-lock"></i> Login</a></li>
+                    <li class=""><a href="/auth/register"><i class="fa fa-user"></i> Signup</a></li>
                 </ul>
             </div>
         </div>
