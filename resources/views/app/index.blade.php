@@ -6,7 +6,12 @@
     <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://devdojo.com/content/themes/devdojo/assets/css/bootstrap.min.css">
+
+
+    <link rel="stylesheet" href="{{ asset('http://devdojo.com/content/themes/devdojo/assets/css/bootstrap.min.css') }}">
+
+
+
     <link rel="stylesheet" href="http://devdojo.com/content/themes/devdojo/assets/css/noty.css">
     <link rel="stylesheet" href="http://devdojo.com/content/themes/devdojo/assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://devdojo.com/content/themes/devdojo/assets/fonts/devdojo/styles.css">
