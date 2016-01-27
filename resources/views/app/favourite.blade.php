@@ -40,7 +40,7 @@
 	<div class="sectionHeader">
 		<div class="container">
 			<div class="copy">
-				<h1 style="text-transform: capitalize;">{{$data['title']}} Lessons</h1>
+				<h1>Favourite Lessons</h1>
 				<span></span>
 			</div>
 		</div>
@@ -49,7 +49,7 @@
 <div class="container">
 
 		<div class="row">
-			@foreach($data['categories'] as $video)
+			@foreach($data['favourite'] as $video)
 				@include('app.includes.sections.video_list')
 			@endforeach
 		</div>

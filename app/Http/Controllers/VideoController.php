@@ -4,6 +4,7 @@ namespace ACADA\Http\Controllers;
 
 use ACADA\User;
 use ACADA\Video;
+use ACADA\Favourite;
 use ACADA\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -35,7 +36,7 @@ class VideoController extends Controller
      */
     public function create()
     {
-        return view('app.pages.create');
+        return view('app.upload');
     }
 
     protected function save(array $data)
@@ -43,7 +44,7 @@ class VideoController extends Controller
         Video::create([
             'src'           => $data['src'],
             'title'         => $data['title'],
-            'user_id'       => Auth::user()->id,
+            'user_id'       => 1,
             'categories'    => $data['categories'],
             'description'    => $data['description'],
         ]);
@@ -59,8 +60,10 @@ class VideoController extends Controller
     {
 
         $this->save($request->all());
+
         $response = "success";
-        return view('app.pages.create', compact('response'));
+
+        return view('app.upload', compact('response'));
     }
 
     /**
@@ -77,20 +80,15 @@ class VideoController extends Controller
 
     public function show($id)
     {
-        $video  = Video::where('id', $id)->get()->first();
+        $video_data  = Video::where('id', $id)->get()->first();
 
-        $video->like_status = "like";
-        $video->favourite_status = "unfavourite";
+        $related_video =  Video::where('categories', $video_data->categories)->take(3)->get();
 
-        $related_video =  Video::where('categories', $video->categories)->take(5)->get();
-        $data =
-        [
-            "video"         => $video,
-            "related_video" => $related_video
-        ];
+        $video_data->favourite_status = "unfavourite";
+        $video_data->related_video  = $related_video;
 
-        //return $data;
-        return view('app.player', compact('data'));
+        //return $video_data->related_video;
+        return view('app.player', compact('video_data'));
     }
 
     public function categories($category)
@@ -117,5 +115,23 @@ class VideoController extends Controller
         return view('app.pages.view', compact('categories'));
     }
 
+    public function favourite()
+    {
+        $user =  User::where('id', 1)->with('favourite')->get()->first();
+
+        $favourite_id   = $user->favourite;
+        $favourite      =  $favourite_id->pluck('video_id');
+        $favourite      = Video::whereIn('id', $favourite)->get();
+
+        $data =
+        [
+            "user"          =>$user,
+            "favourite"     => $favourite
+        ];
+
+        //return $data['favourite'];
+
+        return view('app.favourite', compact('data'));
+    }
 
 }

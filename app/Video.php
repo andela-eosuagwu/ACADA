@@ -3,6 +3,7 @@
 namespace ACADA;
 
 use ACADA\User;
+use ACADA\Favourite;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -12,26 +12,31 @@
                         <a href="/">Home</a>
                     </li>
                     <li class="dropdown">
-                        <a href="/videos" class="dropdown-toggle">Categories</a>
+                        <a href="#" class="dropdown-toggle">Categories</a>
                         <ul class="dropdown-menu multi-level" role="menu">
-                            <li><a href="/videos">Php</a></li>
-                            <li><a href="/shows">Java</a></li>
-                            <li><a href="/series">Node Js</a></li>
+                            <li><a href="/video/category/php">Php</a></li>
+                            <li><a href="/video/category/java">Java</a></li>
+                            <li><a href="/video/category/node">Node Js</a></li>
+                            <li><a href="/video/category/javascript">Javascript</a></li>
                         </ul>
                     </li>
-                    <li><a href="/page/laravel-survival-guide">Upload Video</a></li>
+                    <li><a href="/video/create">Upload Video</a></li>
                 </ul>
 
-                <!--ul class="navbar-right">
-                <li>
-                <div id="navbar-search-form">
-                <form role="search" action="/search" method="GET">
-                <i class="fa fa-search"></i>
-                <input type="text" id="value" name="value" placeholder="Type and Find">
-                </form>
-                </div>
-                </li>
-                </ul-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#_" class="user-link-desktop dropdown-toggle" data-toggle="dropdown">
+                            <img src="/res/images/default.jpg" class="img-circle"> Emeka
+                            <i class="fa fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/user">My Profile</a></li>
+                            <li><a href="/user/favourite">My Favorites</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/auth/logout" id="user_logout_mobile"><i class="fa fa-power-off"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
 
                 <ul class="nav navbar-nav navbar-right">
                     <li class="login-desktop"><a href="/login"><i class="fa fa-lock"></i> Login</a></li>

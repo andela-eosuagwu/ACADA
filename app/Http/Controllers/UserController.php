@@ -18,27 +18,19 @@ class UserController extends Controller
         ->with('video')
         ->get()->first();
 
-        $user_data = User::where('id', 1)->get()->first();
-
-        $data =
-        [
-            "user_data"     => $user_data,
-            "uploaded"      => $user_data->video,
-            "favourite"     => $user_data->favourite
-        ];
-
-        return view('app.video', compact('data'));
+        //return $data;
+        return view('app.profile', compact('data'));
     }
 
     public function edit()
     {
-        $user = User::where('id', Auth::user()->id)->get();
-        return view('app.pages.edit_user', compact('user'));
+        $user = User::where('id',1)->get()->first();
+        return view('app.edit', compact('user'));
     }
 
     public function update(Request $request)
     {
-        $id     = Auth::user()->id;
+        $id     = 1;
         $user   = User::find($id);
 
         if (  $request['avatar'])

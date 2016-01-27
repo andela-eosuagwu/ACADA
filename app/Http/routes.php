@@ -42,7 +42,7 @@ Route::group(['prefix' => 'user/'], function () {
     Route::post('update', [
         'uses'      => 'UserController@update',
         'as'        => 'user.update',
-        'middleware'=> ['auth']
+        //'middleware'=> ['auth']
     ]);
 
     Route::get('videos', [
@@ -50,6 +50,10 @@ Route::group(['prefix' => 'user/'], function () {
         'as'   => 'view'
     ]);
 
+    Route::get('favourite', [
+        'uses' => 'VideoController@favourite',
+        'as'   => 'favourite'
+    ]);
 
 });
 
@@ -94,13 +98,13 @@ Route::group(['prefix' => 'video/'], function () {
     Route::get('create', [
         'uses' => 'VideoController@create',
         'as'   => 'create',
-         'middleware'=> ['auth']
+         //'middleware'=> ['auth']
     ]);
 
     Route::post('create', [
         'uses' => 'VideoController@store',
         'as'   => 'create',
-        'middleware'=> ['auth']
+        //'middleware'=> ['auth']
     ]);
 
     Route::get('{id}', [
