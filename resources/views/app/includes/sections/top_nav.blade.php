@@ -22,26 +22,37 @@
                     </li>
                     <li><a href="/video/create">Upload Video</a></li>
                 </ul>
+                @if(Auth::check() )
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#_" class="user-link-desktop dropdown-toggle" data-toggle="dropdown">
+                                
+                                @if(Auth::user()->avatar = '' || Auth::user()->id = null)
+                                hjvrgr
+                                @endif
 
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#_" class="user-link-desktop dropdown-toggle" data-toggle="dropdown">
-                            <img src="/res/images/default.jpg" class="img-circle"> Emeka
-                            <i class="fa fa-chevron-down"></i>
-                        </a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="/user">My Profile</a></li>
-                            <li><a href="/user/favourite">My Favorites</a></li>
-                            <li class="divider"></li>
-                            <li><a href="/auth/logout" id="user_logout_mobile"><i class="fa fa-power-off"></i> Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                                <img src="/res/images/default.jpg" class="img-circle"> 
 
+                                {{ Auth::user()->username }}
+                                <i class="fa fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/user">My Profile</a></li>
+                                <li><a href="/user/favourite">My Favorites</a></li>
+                                <li class="divider"></li>
+                                <li><a href="/auth/logout" id="user_logout_mobile"><i class="fa fa-power-off"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                @endif
+
+                @if( ! Auth::check() )
                 <ul class="nav navbar-nav navbar-right">
                     <li class=""><a href="/auth/login"><i class="fa fa-lock"></i> Login</a></li>
                     <li class=""><a href="/auth/register"><i class="fa fa-user"></i> Signup</a></li>
                 </ul>
+                @endif
+            
             </div>
         </div>
     </nav>

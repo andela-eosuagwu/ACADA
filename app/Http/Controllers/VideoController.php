@@ -117,7 +117,7 @@ class VideoController extends Controller
 
     public function favourite()
     {
-        $user =  User::where('id', 1)->with('favourite')->get()->first();
+        $user =  User::where('id', Auth::user()->id)->with('favourite')->get()->first();
 
         $favourite_id   = $user->favourite;
         $favourite      =  $favourite_id->pluck('video_id');
@@ -128,8 +128,6 @@ class VideoController extends Controller
             "user"          =>$user,
             "favourite"     => $favourite
         ];
-
-        //return $data['favourite'];
 
         return view('app.favourite', compact('data'));
     }

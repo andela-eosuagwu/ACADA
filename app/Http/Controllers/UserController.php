@@ -14,23 +14,22 @@ class UserController extends Controller
 {
     public function index()
     {
-        $data = User::where('id', 1)
+        $data = User::where('id', Auth::user()->id)
         ->with('video')
         ->get()->first();
 
-        //return $data;
         return view('app.profile', compact('data'));
     }
 
     public function edit()
     {
-        $user = User::where('id',1)->get()->first();
+        $user = User::where('id', Auth::user()->id)->get()->first();
         return view('app.edit', compact('user'));
     }
 
     public function update(Request $request)
     {
-        $id     = 1;
+        $id     = Auth::user()->id;
         $user   = User::find($id);
 
         if (  $request['avatar'])

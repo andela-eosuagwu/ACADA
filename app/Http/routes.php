@@ -30,19 +30,19 @@ Route::group(['prefix' => 'user/'], function () {
     Route::get('/', [
         'uses' => 'UserController@index',
         'as'   => 'user',
-        //'middleware'=> ['auth']
+        'middleware'=> ['auth']
     ]);
 
     Route::get('edit', [
         'uses' => 'UserController@edit',
         'as'   => 'user/user',
-        //'middleware'=> ['auth']
+        'middleware'=> ['auth']
     ]);
 
     Route::post('update', [
         'uses'      => 'UserController@update',
         'as'        => 'user.update',
-        //'middleware'=> ['auth']
+        'middleware'=> ['auth']
     ]);
 
     Route::get('videos', [
@@ -56,7 +56,6 @@ Route::group(['prefix' => 'user/'], function () {
     ]);
 
 });
-
 
 Route::group(['prefix' => 'auth/'], function () {
 
@@ -98,13 +97,13 @@ Route::group(['prefix' => 'video/'], function () {
     Route::get('create', [
         'uses' => 'VideoController@create',
         'as'   => 'create',
-         //'middleware'=> ['auth']
+         'middleware'=> ['auth']
     ]);
 
     Route::post('create', [
         'uses' => 'VideoController@store',
         'as'   => 'create',
-        //'middleware'=> ['auth']
+        'middleware'=> ['auth']
     ]);
 
     Route::get('{id}', [

@@ -80,11 +80,13 @@ class AuthController extends Controller
         else
         {
             $this->create($request->all());
-            return view('app.register', compact('response'));
+            $pass = "pass";
+            return view('app.register', compact('pass'));
         };
 
-        return $response;
+        // return $response;
     }
+
 
     /**
      * Create a new user instance after a valid registration.
@@ -95,7 +97,7 @@ class AuthController extends Controller
     protected function postLogin(Request $request)
     {
         $status = Auth::attempt($request->only(['username', 'password']));
-
+        
         if ( ! $status )
         {
             $response = "Failed";
@@ -106,6 +108,7 @@ class AuthController extends Controller
             return redirect('/');
         }
     }
+
 
     /**
      * Logout current user.

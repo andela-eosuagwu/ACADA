@@ -47,15 +47,17 @@
 
 		@if( isset($response) )
 		    <script>
-		    swal("Login Failed", "username / email already taking", "error")
+		    swal("Registration Failed", "username / email dosen't exist", "error")
 		    </script>
 		@endif
 
+
 		@if( isset($pass) )
 		    <script>
-		    swal("Registration succesfull", "username / email already taking", "success")
+		    swal("Registration scussesful", "", "scusses")
 		    </script>
 		@endif
+
 
 		<h4 class="subheadline">Register</h4>
 		<div class="clear"></div>
