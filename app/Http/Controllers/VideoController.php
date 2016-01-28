@@ -21,11 +21,6 @@ class VideoController extends Controller
     {
         $video_data =  $this->videoRepository->getAllVideo();
 
-        $video_data->each(function ($video_data, $key) {
-            $video_data->like_status = "can_dislike";
-            $video_data->favourite_status = "can_favourite";
-        });
-
         return view('app.index', compact('video_data'));
     }
 
@@ -44,7 +39,7 @@ class VideoController extends Controller
         Video::create([
             'src'           => $data['src'],
             'title'         => $data['title'],
-            'user_id'       => 1,
+            'user_id'       => Auth::user()->id,
             'categories'    => $data['categories'],
             'description'    => $data['description'],
         ]);
@@ -80,14 +75,44 @@ class VideoController extends Controller
 
     public function show($id)
     {
-        $video_data  = Video::where('id', $id)->get()->first();
+
+        $video_data  = Video::where('id', $id)->with('favourites')->get()->first();
+
+        $favourite_ids = $video_data->favourites;
+
+        $video_data->views = $video_data->views + 1;
+        $video_data->save();
 
         $related_video =  Video::where('categories', $video_data->categories)->take(3)->get();
 
-        $video_data->favourite_status = "unfavourite";
-        $video_data->related_video  = $related_video;
+        $is_like_episode = false;
+        
+        if ( ! Auth::check() ) {
+            $status =  "must_login";
+        }
+        else {
 
-        //return $video_data->related_video;
+            foreach ($favourite_ids as $id) {
+                if ($id->user_id == Auth::user()->id) {
+                    $is_like_episode = true;
+                    break;
+                }
+            }
+
+
+            if ($is_like_episode) {
+                $status = "dislike";
+            }
+            else {
+                $status = "like";
+            }
+        }
+
+
+        $video_data->related_video = $related_video;
+        $video_data->favourite_status = $status;
+        $video_data->user_id = Auth::user()->id;
+        //$video_data;
         return view('app.player', compact('video_data'));
     }
 

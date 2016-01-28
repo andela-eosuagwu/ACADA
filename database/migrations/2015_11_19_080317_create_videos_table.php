@@ -18,10 +18,8 @@ class CreateVideosTable extends Migration
             $table->text('title');
             $table->text('description');
             $table->string('src');
-            $table->integer('likes')->nullable();
-            $table->integer('shared')->nullable();
-            $table->integer('favourite')->nullable();
-            $table->integer('views')->nullable();
+            $table->integer('favourite')->default(0);
+            $table->integer('views')->default(0);
             $table->timestamps();
             $table->integer('user_id')->unsigned();
 

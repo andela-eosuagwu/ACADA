@@ -4,6 +4,7 @@ namespace ACADA\Http\Repository;
 
 use DB;
 use ACADA\Like;
+use Auth;
 
 class LikeRepository
 {
@@ -28,23 +29,26 @@ class LikeRepository
         Like::insert(['user_id' => $userid, 'video_id' => $video_id]);
     }
 
-    public function checkLikeStatusForUserOnvideo($likes)
+    public function checkLikeStatusForUserOnEpisode($likes)
     {
-        $is_like_video = false;
+        $is_like_episode = false;
+        
+        if (! Auth::check() ) {
+            return "must_login";
+        }
 
         foreach ($likes as $like) {
-            if ($like->user_id == 1) {
-                $is_like_video = true;
+            if ($like->user_id == Auth::user()->id) {
+                $is_like_episode = true;
                 break;
             }
         }
-        if ($is_like_video) {
+        if ($is_like_episode) {
             $status = "dislike";
         }
         else {
             $status = "like";
         }
-
         return $status;
     }
 }

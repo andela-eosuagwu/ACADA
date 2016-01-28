@@ -13,14 +13,14 @@
                         <a class="block-thumbnail" href="/video/{{$video->id}}">
                             <div class="thumbnail-overlay"></div>
                             <span class="play-button"></span>
-                            <iframe style="width:100%; height:40%" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+                            <iframe style="width:100%; height:40%" src="https://youtube.com/embed/{{ $video->src }}" frameborder="0" allowfullscreen></iframe>
 
                             <div class="details">
                                 <h2>{{$video->title}}</h2>
                                 <span>{{$video->created_at->diffForHumans()}}</span>
                             </div>
                         </a>
-                        <div class="block-contents">
+                        <div class="block-contents" style="overflow: hidden;">
                             <p class="date">
                                 {{$video->title }}
                                 <span class="label label-info">Views {{$video->views}}</span>

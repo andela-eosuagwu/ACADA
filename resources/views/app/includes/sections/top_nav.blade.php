@@ -3,7 +3,7 @@
             <div class="navbar-header">
                 <a id="nav-toggle" href="#"><span></span></a>
                 <a href="/" class="navbar-brand">
-                    <img src="/res/images/logo.png">
+                    <img style="width:50%; height:20px; " src="/res/images/emeka_logo.png">
                 </a>
             </div>
             <div class="collapse navbar-collapse right" id="bs-example-navbar-collapse-1">
@@ -27,11 +27,15 @@
                         <li class="dropdown">
                             <a href="#_" class="user-link-desktop dropdown-toggle" data-toggle="dropdown">
                                 
-                                @if(Auth::user()->avatar = '' || Auth::user()->id = null)
-                                hjvrgr
+                                @if(! Auth::user()->avatar == '' || ! Auth::user()->avatar == null)
+                                    <img src="{{Auth::user()->avatar}}" class="img-circle"> 
+                                   
+                                @endif
+                                @if( Auth::user()->avatar == NULL  )
+                                 <img src="/res/images/default.jpg" class="img-circle"> 
                                 @endif
 
-                                <img src="/res/images/default.jpg" class="img-circle"> 
+                                
 
                                 {{ Auth::user()->username }}
                                 <i class="fa fa-chevron-down"></i>

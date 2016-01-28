@@ -6,7 +6,7 @@
 
 
 
-    <title>DevDojo - Welcome to the DevDojo</title>
+    <title>ACADA - Welcome to the ACADA</title>
     <meta name="description" content="Welcome to the DevDojo">
 
 

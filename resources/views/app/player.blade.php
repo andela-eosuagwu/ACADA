@@ -2,9 +2,11 @@
 
 
 
-    <title>Creating Dummy Data with Laravel 5 </title>
+    <title>ACADA - {{$video_data->title}}</title>
     <meta name="description" content="Learn how to use the faker package to create dummy data for your application.">
 
+
+    <script src="res/javascript/helper.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- for Google -->
@@ -68,6 +70,8 @@
 
 
 
+<script type="text/javascript" src="/res/javascript/helper.js"></script>
+
 
 
      @include('app.includes.sections.top_nav')
@@ -86,14 +90,24 @@
 			<div class="col-md-8" id="left_column" style="padding-right:0px;">
 				<div id="video_left">
 					<div id="video_container" class="fitvid">
-						<div class="fluid-width-video-wrapper" style="padding-top: 56.25%;"><iframe src="https://www.yutube.com/embed/Wv3wPNvB8T8?rel=0&amp;showinfo=0&amp;theme=light&amp;autoplay=1" frameborder="0" allowfullscreen="" id="fitvid723996"></iframe></div>
+						<div class="fluid-width-video-wrapper" style="padding-top: 56.25%;">
+						<iframe src="https://youtube.com/embed/{{ $video_data->src }}" frameborder="0" allowfullscreen="" id="fitvid723996"></iframe></div>
 					</div>
 					<div id="left_content">
 						<h3 class="video_title">
 						{{$video_data->title}}
-							<span class="view-count"><i class="fa fa-eye"></i> Views </span>
-						<div class="favorite btn btn-default " data-authenticated="" data-videoid="75"><i class="fa fa-heart"></i> Favorite</div>
+							<span class="view-count"><i class="fa fa-eye"></i> Views {{$video_data->views}}</span>
+						<div 
+							class="favorite btn btn-default" data-authenticated="" data-videoid="75">
+							<i class="fa fa-heart social-btn like-btn {{$video_data->status}}"like-status="{{$video_data->favourite_status}}"> {{$video_data->favourite}}</i>
 						</h3>
+						<h3>{{$video_data->description}}</h3>
+						 <input type="hidden" id="token" name="_token" value="{{ csrf_token() }}">
+                        
+                        @if( Auth::check() )
+                            <input type="hidden" id="user_id" value="{{ $video_data->user_id }}" >
+                        @endif
+                        <input type="hidden" id="video_id" value="{{ $video_data->id }}" >
 					</div>
 				</div>
 			</div>
@@ -109,7 +123,7 @@
 									<article class="block">
 										<a class="block-thumbnail" href="/video/{{$video->id}}">
 											<span class="play-button-small"></span>
-	                        				<iframe style="width:100%; height:20%" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+	                        				<iframe style="width:100%; height:20%" src="https://youtube.com/embed/{{ $video->src }}" frameborder="0" allowfullscreen></iframe>
 										</a>
 									</article>
 								</div>
@@ -129,3 +143,4 @@
 			</div>
 		</div>
 	</div>
+

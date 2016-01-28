@@ -52,7 +52,9 @@ Route::group(['prefix' => 'user/'], function () {
 
     Route::get('favourite', [
         'uses' => 'VideoController@favourite',
-        'as'   => 'favourite'
+        'as'   => 'favourite',
+        'middleware'=> ['auth']
+
     ]);
 
 });
@@ -131,12 +133,12 @@ Route::group(['prefix' => 'video/'], function () {
         'as'   => 'video.dislike'
     ]);
 
-    Route::get('favourite/{video_id}/{user_id}', [
+    Route::post('favourite', [
         'uses' => 'FavouriteController@favourite',
         'as'   => 'video.favourite'
     ]);
 
-    Route::get('unfavourite/{video_id}/{user_id}', [
+    Route::post('unfavourite', [
         'uses' => 'FavouriteController@unfavourite',
         'as'   => 'video.unfavourite'
     ]);

@@ -9,26 +9,25 @@ use ACADA\Http\Controllers\Controller;
 class FavouriteController extends Controller
 {
 
-    public function favourite($video_id, $user_id)
+    public function favourite(Request $request)
     {
-        $video        = $this->videoRepository->findVideoById($video_id);
+        $video        = $this->videoRepository->findVideoById($request['video_id']);
         $video->favourite = $video->favourite + 1;
         $video->save();
 
-        $this->favouriteRepository->insertIntoFavouriteTable($video_id, $user_id);
-
-        return redirect()->back();
+        $this->favouriteRepository->insertIntoFavouriteTable($request['user_id'], $request['video_id']);
 
     }
 
-    public function unfavourite($video_id, $user_id)
+    public function unfavourite(Request $request)
     {
-        $video              = $this->videoRepository->findVideoById($video_id);
+        $video              = $this->videoRepository->findVideoById($request['video_id']);
         $video->favourite   = $video->favourite - 1;
         $video->save();
 
-        $this->favouriteRepository->findAndDeleteFavouriteByUserOnVideo($video_id, $user_id
+        $this->favouriteRepository->findAndDeleteFavouriteByUserOnVideo($request['user_id'], $request['video_id']
             );
-        return redirect()->back();
+
+return 444;
     }
 }

@@ -5,19 +5,19 @@
                 <div class="col-md-4">
                                         <a href="/" class="logo"><img src="/res/images/logo.png"></a>
                     <p>    </p>
-                    <a href="http://facebook.com/thedevdojo" class="facebook social-link"><i class="fa fa-facebook"></i></a>
-                    <a href="http://twitter.com/thedevdojo" class="twitter social-link"><i class="fa fa-twitter"></i></a>
-                    <a href="http://plus.google.com/hellovideoapp" class="google social-link"><i class="fa fa-google-plus"></i></a>
+                    <a href="http://facebook.com/" class="facebook social-link"><i class="fa fa-facebook"></i></a>
+                    <a href="http://twitter.com/" class="twitter social-link"><i class="fa fa-twitter"></i></a>
+                    <a href="http://plus.google.com/" class="google social-link"><i class="fa fa-google-plus"></i></a>
                     <a href="http://youtube.com/" class="youtube social-link"><i class="fa fa-youtube"></i></a>
                     <div class="clear"></div>
                 </div>
                 <div class="col-md-3">
                     <h4>Video Categories</h4>
                     <ul>
-                                                    <li><a href="#">HTML</a></li>
-                                                    <li><a href="#">CSS</a></li>
-                                                    <li><a href="#">Javascript</a></li>
-                                                    <li><a href="#">PHP</a></li>
+                                                    <li><a href="/video/category/html">HTML</a></li>
+                                                    <li><a href="/video/category/css">CSS</a></li>
+                                                    <li><a href="/video/category/javascript">Javascript</a></li>
+                                                    <li><a href="/video/category/php">PHP</a></li>
                                             </ul>
                 </div>
                 <div class="col-md-2">
