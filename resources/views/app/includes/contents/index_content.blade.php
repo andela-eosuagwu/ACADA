@@ -4,7 +4,7 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <h3><a href="/videos"><i class="fa fa-youtube-play" style="position:relative; top:3px;"></i> Latest Lessons</a></h3>
+                    <h3><a href="#"><i class="fa fa-youtube-play" style="position:relative; top:3px;"></i> Latest Lessons</a></h3>
                 </div>
 
                 @foreach($video_data as $video)

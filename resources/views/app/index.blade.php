@@ -1,7 +1,7 @@
 <html class="gr__devdojo_com"><head>
 
     <title>ACADA - Welcome to ACADA</title>
-    <meta name="description" content="Welcome to the DevDojo">
+    <meta name="description" content="Welcome to the ACADA">
 
     <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1">
 
