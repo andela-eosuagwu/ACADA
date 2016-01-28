@@ -40,15 +40,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 <script src="http://devdojo.com/content/themes/devdojo/assets/js/pgwslider.min.js"></script>
 <script>
     $(document).ready(function() {
