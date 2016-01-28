@@ -72,7 +72,30 @@
 
 <script type="text/javascript" src="/res/javascript/helper.js"></script>
 
+<style>
+	.dislike {
+		background:#E74C3C;
+		color:#fff;
+	}
 
+	.like {
+		background:transparent;
+		color:#ccc;
+	}
+
+	.like-btn {
+    padding: 6px 12px;
+    border-radius: 5px;	
+	}
+
+	.like-btn:hover {
+	    background: #E74C3C;
+	    cursor: pointer;
+	}
+
+
+
+</style>
 
      @include('app.includes.sections.top_nav')
 
@@ -97,9 +120,8 @@
 						<h3 class="video_title">
 						{{$video_data->title}}
 							<span class="view-count"><i class="fa fa-eye"></i> Views {{$video_data->views}}</span>
-						<div 
-							class="favorite btn btn-default" data-authenticated="" data-videoid="75">
-							<i class="fa fa-heart social-btn like-btn {{$video_data->status}}"like-status="{{$video_data->favourite_status}}"> {{$video_data->favourite}}</i>
+						
+							<i style="float:right"class="fa fa-heart social-btn like-btn  {{$video_data->favourite_status}}" like-status="{{$video_data->favourite_status}}"> {{$video_data->favourite}}</i>
 						</h3>
 						<h3>{{$video_data->description}}</h3>
 						 <input type="hidden" id="token" name="_token" value="{{ csrf_token() }}">
@@ -143,4 +165,3 @@
 			</div>
 		</div>
 	</div>
-
