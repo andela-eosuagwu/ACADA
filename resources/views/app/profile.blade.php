@@ -62,6 +62,15 @@
 		<div class="heading-divider"></div>
 		<div class="row">
 
+		@if( $data->video->count() == null )
+            <div style="margin: 0 auto; text-align: center;">
+                <h1>Oops, no record found :(</h1>
+                <p>Start uploading awesome videos today <a href="/video/create">Click here</a></p>
+           		<br>
+            </div>
+        @endif
+
+
 			@foreach($data->video->take(3) as $video)
 				@include('app.includes.sections.video_list')
 			@endforeach

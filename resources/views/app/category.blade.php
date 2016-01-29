@@ -47,6 +47,15 @@
 	</div>
 
 <div class="container">
+                
+
+        @if( $data['categories']->count() == null )
+            <div style="margin: 0 auto; text-align: center;">
+                <h1>Oops, no record found for {{$data['title']}} videos</h1>
+                <p>Be the first to upload {{$data['title']}} videos <a href="/video/create">Click here</a></p>
+            </div>
+        @endif
+
 
 		<div class="row">
 			@foreach($data['categories'] as $video)
@@ -55,10 +64,12 @@
 		</div>
 
 		<div class="pagination" style="width:100%; text-align:center;">
-			</div>
 		</div>
+</div>
 
  @include('app.includes.sections.bottom_bar')
 
-	@include('app.includes.sections.footer')
+@include('app.includes.sections.footer')
+
+
 

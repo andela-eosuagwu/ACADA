@@ -48,6 +48,14 @@
 
 <div class="container">
 
+
+		@if( $data['favourite']->count() == null )
+            <div style="margin: 0 auto; text-align: center;">
+                <h1>Oops, no record found :(</h1>
+                <p>Checkout awesome videos <a href="/">Click here</a></p>
+           		<br>
+            </div>
+        @endif
 		<div class="row">
 			@foreach($data['favourite'] as $video)
 				@include('app.includes.sections.video_list')

@@ -7,6 +7,14 @@
                     <h3><a href="#"><i class="fa fa-youtube-play" style="position:relative; top:3px;"></i> Latest Lessons</a></h3>
                 </div>
 
+                @if( $video_data->count() == null )
+                    <div style="margin: 0 auto; text-align: center;">
+                        <h1>Oops, videos are yet to be uploaded :(</h1>
+                        <p>want to be the first to upload a video to ACADA? <a href="/video/create">Click here</a></p>
+                    </div>
+                @endif
+
+
                 @foreach($video_data as $video)
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                     <article class="block">

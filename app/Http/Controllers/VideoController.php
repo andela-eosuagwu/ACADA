@@ -20,7 +20,7 @@ class VideoController extends Controller
     public function index()
     {
         $video_data =  $this->videoRepository->getAllVideo();
-
+        
         return view('app.index', compact('video_data'));
     }
 
