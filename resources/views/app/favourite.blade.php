@@ -8,11 +8,15 @@
 
 <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1">
 
+    @include('app.style')
+<!-- 
 <link rel="stylesheet" href="http://devdojo.com/content/themes/devdojo/assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://devdojo.com/content/themes/devdojo/assets/css/noty.css">
 <link rel="stylesheet" href="http://devdojo.com/content/themes/devdojo/assets/css/font-awesome.min.css">
 <link rel="stylesheet" href="http://devdojo.com/content/themes/devdojo/assets/fonts/devdojo/styles.css">
 <link rel="stylesheet" href="/content/themes/devdojo/assets/css/prism.css">
+ -->
+
 <!--[if gte IE 9]>
   <style type="text/css">
     .gradient {
