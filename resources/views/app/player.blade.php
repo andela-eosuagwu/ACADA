@@ -24,13 +24,7 @@
     <meta property="og:url" content="http://devdojo.com/video/75">
     <meta property="og:description" content="Learn how to use the faker package to create dummy data for your application.">
 
-    <!-- for Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Creating Dummy Data with Laravel 5 ">
-    <meta name="twitter:description" content="Learn how to use the faker package to create dummy data for your application.">
-    <meta name="twitter:image" content="http://devdojo.com/content/uploads/images/August2015/faker-large.jpg">
-
-
+ 
 <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1">
 
     @include('app.style')
