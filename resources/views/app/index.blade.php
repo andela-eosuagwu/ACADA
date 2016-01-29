@@ -9,16 +9,18 @@
 
 
 
-    <link rel="stylesheet" type="text/css" href="{{asset('/res/stylesheet/style1.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('/res/stylesheet/style2.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('/res/stylesheet/style3.css')}}">
-
-
-
+    <link rel="stylesheet" type="text/css" href="{! secure_asset('/res/stylesheet/style1.css') !}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/res/stylesheet/style1.css') }}">
+    
+    <link rel="stylesheet" type="text/css" href="{! secure_asset('/res/stylesheet/style2.css') !}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/res/stylesheet/style2.css') }}">
+    
+    <link rel="stylesheet" type="text/css" href="{! secure_asset('/res/stylesheet/style3.css') !}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('/res/stylesheet/style3.css') }}">
 
     <!--
         <link rel="stylesheet" href="http://devdojo.com/content/themes/devdojo/assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="http://devdojo.com/content/themes/devdojo/assets/fonts/devdojo/styles.css">
+        <link rel="stylesheet" href="http://devdojo.com/content/themes/devdojo/assets/fonts/devdojo/styles.css">
     -->
 
 
