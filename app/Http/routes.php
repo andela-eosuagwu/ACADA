@@ -14,8 +14,7 @@
 
 Route::get('/', [
     'uses' => 'VideoController@index',
-    'as'   => '/',
-    'middleware'=> ['auth']
+    'as'   => '/'
 ]);
 
 Route::get('/contact', function () {
