@@ -114,7 +114,7 @@ class VideoController extends Controller
         
         if( ! Auth::check() )
         {
-            return redirect = "/auth/login";
+            return redirect("/auth/login");
         }
         
         $video_data->user_id = Auth::user()->id;
