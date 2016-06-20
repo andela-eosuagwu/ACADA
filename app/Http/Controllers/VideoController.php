@@ -111,7 +111,13 @@ class VideoController extends Controller
 
         $video_data->related_video = $related_video;
         $video_data->favourite_status = $status;
+        
+        if(!Auth::check()){
+            return redirect = "/auth/login";
+        }
+        
         $video_data->user_id = Auth::user()->id;
+        
         //$video_data;
         return view('app.player', compact('video_data'));
     }
