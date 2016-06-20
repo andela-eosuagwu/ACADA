@@ -112,7 +112,8 @@ class VideoController extends Controller
         $video_data->related_video = $related_video;
         $video_data->favourite_status = $status;
         
-        if(!Auth::check()){
+        if( ! Auth::check() )
+        {
             return redirect = "/auth/login";
         }
         
